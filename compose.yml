@@ -1,0 +1,42 @@
+name: ai-engineering
+services:
+  postgres:
+    image: postgres@sha256:e013e867e712fec275706a6c51c966f0bb0c93cfa8f51000f85a15f9865a28cb
+    container_name: ai-engineering-postgres
+    environment:
+      POSTGRES_USER: ai_app
+      POSTGRES_DB: ai_engineering
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run node scripts/setup.mjs first}
+    ports: ['127.0.0.1:55437:5432']
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U ai_app -d ai_engineering']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+  app:
+    profiles: [app]
+    build: .
+    image: ai-engineering:local-verification
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+      DATABASE_URL: postgresql://ai_app:${POSTGRES_PASSWORD}@postgres:5432/ai_engineering
+      NUXT_PUBLIC_SITE_URL: ${APP_BASE_URL:-http://localhost:3000}
+      SMTP_HOST: mailpit
+    ports: ['127.0.0.1:3000:3000']
+    volumes: ['./.data:/app/.data']
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+  mailpit:
+    image: axllent/mailpit@sha256:f0b0ed33c8cf53aac0dd004abbe245c83420a7ae44914e25178f7791dec5723a
+    profiles: [smtp]
+    ports: ['127.0.0.1:1025:1025', '127.0.0.1:8025:8025']
+    restart: unless-stopped
+volumes:
+  pgdata:
+    name: ai-engineering-pg

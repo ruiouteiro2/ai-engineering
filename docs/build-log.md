@@ -1,0 +1,25 @@
+# Build log
+
+## 2026-10-21 — Intake
+- Safely inspected and extracted the user-provided ZIP; read complete specification. No application code or existing UI patterns supplied.
+- Workspace initially had no Git repository. Created project repository on main; README commit b0fe435 pushed to ruiouteiro2/ai-engineering with verified ruiouteiro2 authentication.
+- Node 24.21.0, npm 11.19.0, Docker 29.2.0 available; pnpm not installed. Use npm lockfile and equivalent npm commands (documented deviation).
+- Preserve supplied catalog and source art. Free resource seed says six checklist categories while specification explicitly says five groups of ten; normalize public metadata to five groups of ten and document source discrepancy.
+- Local build follows supplied Nuxt/Postgres architecture; Sites hosting defaults do not replace the requested stack or authorize production activation.
+- Package metadata recorded in dependency-metadata.json; installation uses disabled lifecycle scripts.
+
+## 2026-10-21 — Implementation and final local verification
+
+- Delivered the Nuxt/PostgreSQL application, public catalog and original art, account/authentication, admin/basic CMS, private-file publishing, exact bundles, signed payments and email worker. All 83 supplied products remain PLANNED; test assets use separate hidden TEST-* records.
+- Added read-only integration/release dashboards, honest inactive affiliate/analytics states, separate marketing consent, legal draft gates, data export and manual privacy triage. The 50-scenario evidence ledger is `docs/verification.md`.
+- Source-grounded checks used installed Nuxt/Nitro/h3/Drizzle definitions and current official Lemon Squeezy checkout/order/store/variant documentation. npm replaced unavailable pnpm; TypeScript 5.9.3 avoids the verified TypeScript 7 lint incompatibility.
+- Final checks: strict typecheck PASS; ESLint PASS (zero warnings/errors); Prettier check PASS; five unit tests PASS; sixteen real HTTP/PostgreSQL integration scenarios PASS; seven Chromium browser journeys PASS (22.5 seconds). Browser journeys include 31 public utility/category routes, every supplied product detail, every admin section, email auth, preference persistence, CMS publication, simulated guest payment and actual private-byte download.
+- Axe checks passed on tested dark/light home and admin gate states; keyboard skip/navigation/dialog and five viewport widths checked. Four sanitized public screenshots saved under `docs/evidence`; capture observed zero page errors and no overflow at 375/1440 pixels. No full assistive-technology or cross-browser certification claimed.
+- Docker build PASS with pinned Node base; runtime contains Nitro output plus the bundled worker, runs as node, and reports healthy against dedicated PostgreSQL. Docker Desktop host-network binding was not reachable from WSL; the documented Compose app profile uses bridge DNS and explicit loopback port publication instead. No production infrastructure was changed.
+- Fresh disposable database: migrations twice and seed twice PASS, exactly 83 planned/non-purchasable records. Dedicated Compose PostgreSQL and optional Mailpit are healthy. SMTP acceptance/readback PASS. Separate-database restore PASS from 20261021T184004Z dump, with 84 products and one test order at that snapshot. Source data preserved.
+- Initial bounded local performance: catalog p95 81 ms, home SSR p95 304 ms, 50 requests each/concurrency five/zero errors. Not a staging or production capacity claim.
+- Regression work fixed: duplicate/stale payments, policy slug role bypass, chunked-body limits, missing paid-transition emails, dynamic release notes, published-resource wording, admin component prefix, static-method routing shadow, safe duplicate-record responses and sensitive default error logging. Test harness corrections used exact page readiness and exact sitemap paths; product behavior was not weakened to pass tests.
+- Dependency gate records two unresolved high build-tool advisory roots (braces/node-forge), absent from the shipped runtime. Exceptions expire 2026-11-21; new high/critical roots fail. Details in `docs/security.md`. CI action SHA pins were verified against the official repositories' v6 refs.
+- Review independence: self-review in bounded implementation slices; no independent reviewer was available/used. Known external gates remain actual files/licenses, operator/legal review, merchant sandbox/live evidence, S3 target permissions, production SMTP/DNS/TLS, monitoring/support ownership and target-host restoration/rollout.
+- Final production image identity: `sha256:dd48005e545292526ecd96317dd699226e0c398a87a834653040d70485dd0ea9`. Container restart health readback PASS; shipped worker processed four queued synthetic messages with zero failures. Captured container logs contained no SQL parameter dump or injected sensitive test marker.
+- Staged review: 340 files before final metadata additions; exact local secrets/credential patterns absent, private environment/mail/assets/backups/traces excluded. Original Markdown hard-break whitespace is intentional and preserved through `.gitattributes`.

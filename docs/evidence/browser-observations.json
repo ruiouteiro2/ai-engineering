@@ -1,0 +1,9 @@
+{
+  "browser": "Chromium",
+  "viewports": [
+    375,
+    1440
+  ],
+  "pageErrors": [],
+  "overflow": false
+}

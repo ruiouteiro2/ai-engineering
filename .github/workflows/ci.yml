@@ -1,0 +1,56 @@
+name: verify
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  application:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: ai_app
+          POSTGRES_PASSWORD: ci-disposable-password
+          POSTGRES_DB: ai_engineering
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U ai_app -d ai_engineering"
+          --health-interval 5s --health-timeout 3s --health-retries 10
+    env:
+      DATABASE_URL: postgresql://ai_app:ci-disposable-password@localhost:5432/ai_engineering
+      APP_BASE_URL: http://localhost:3000
+      SESSION_SECRET: ci-only-disposable-session-secret-not-for-production
+      LEMONSQUEEZY_WEBHOOK_SECRET: ci-only-disposable-webhook-secret
+      PAYMENT_PROVIDER: mock
+      EMAIL_PROVIDER: mock
+      STORAGE_PROVIDER: local
+      LEMONSQUEEZY_MODE: test
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24.21.0'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run prepare
+      - run: npm run typecheck && npm run lint && npm run format:check
+      - run: node --import tsx scripts/migrate.ts && node --import tsx scripts/migrate.ts && node --import tsx scripts/seed.ts && node --import tsx scripts/seed.ts
+      - run: npm run test:unit && npm run build
+      - run: node node_modules/playwright/cli.js install --with-deps chromium
+      - name: Exercise built server
+        run: |
+          node .output/server/index.mjs > /tmp/app.log 2>&1 &
+          for attempt in $(seq 1 40); do curl -fsS http://localhost:3000/api/health && break; sleep 1; done
+          npm run test:integration
+          npm run test:e2e
+          node .output/server/worker.mjs
+      - name: Record dependency advisories
+        run: npm run audit:dependencies
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        if: always()
+        with:
+          name: verification-evidence
+          path: |
+            playwright-report
+            dependency-audit.json

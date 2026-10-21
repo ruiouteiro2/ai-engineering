@@ -1,0 +1,4309 @@
+{
+  "products": [
+    {
+      "sku": "FREE01",
+      "title": "The AI Software Reality Check",
+      "type": "FREE_RESOURCE",
+      "tier": "FREE",
+      "formats": ["PDF", "XLSX", "SKILL", "SAMPLE_REPORT"],
+      "contents": [
+        "20–30-page annotated guide",
+        "50-point checklist in six categories",
+        "Product Auditor Lite skill",
+        "Sample annotated audit",
+        "Three realistic failure scenarios"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/FREE01.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF01",
+      "title": "Product Discovery, Requirements & Engineering Thinking",
+      "type": "PDF_GUIDE",
+      "tier": "FOUNDATION",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Engineering with AI",
+          "topics": [
+            "Traditional roles and their responsibilities",
+            "working software versus production-ready product",
+            "hidden product scope",
+            "ethical limits of agent autonomy"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Product discovery",
+          "topics": [
+            "Audience, jobs-to-be-done and user segments",
+            "problem statement and desired outcomes",
+            "competition and assumptions",
+            "scope validation without building"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Actors and stakeholder modelling",
+          "topics": [
+            "Anonymous visitors, registered users, customers, admins, support, moderators, team owners and external services",
+            "privileges",
+            "consent and identity boundaries"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Functional requirements",
+          "topics": [
+            "Primary and secondary features",
+            "user stories and use cases",
+            "preconditions, postconditions and invariants",
+            "alternate and failure flows",
+            "dependencies"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Non-functional requirements",
+          "topics": [
+            "Security and privacy",
+            "availability and resilience",
+            "performance and cost",
+            "accessibility and localization",
+            "observability and maintenance"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Scope and prioritization",
+          "topics": [
+            "MVP versus production completeness",
+            "must/should/could and exclusion notes",
+            "release milestones",
+            "scope creep",
+            "technical debt transparency"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "Business rules and constraints",
+          "topics": [
+            "Eligibility, trials, quotas and limits",
+            "plan entitlements",
+            "geographic/legal constraints",
+            "data retention",
+            "timing and cancellation rules"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Journey mapping",
+          "topics": [
+            "Discovery, registration, onboarding",
+            "paid conversion and renewals",
+            "support and reporting",
+            "suspension, cancellation and offboarding",
+            "interrupted journeys"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Data specification",
+          "topics": [
+            "Entities, ownership and relationships",
+            "classification and sensitivity",
+            "collection purpose and lifecycle",
+            "export and deletion",
+            "audit metadata"
+          ]
+        },
+        {
+          "number": 10,
+          "title": "Risk identification",
+          "topics": [
+            "Technical, legal, operational, commercial and security risks",
+            "probability/impact matrix",
+            "mitigations and responsible ownership"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Engineering choices",
+          "topics": [
+            "Stack selection and maturity",
+            "build-versus-buy",
+            "architectural trade-offs",
+            "ADRs and reversible decisions"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "Complete product requirements documents",
+          "topics": [
+            "PRD structure",
+            "functional matrix",
+            "acceptance criteria",
+            "traceability and evidence",
+            "assumptions/open questions"
+          ]
+        },
+        {
+          "number": 13,
+          "title": "Implementation planning",
+          "topics": [
+            "Vertical slices",
+            "dependencies and definition of ready/done",
+            "agent handoffs",
+            "stage review",
+            "measurable release criteria"
+          ]
+        }
+      ],
+      "related": ["PPT01", "SK02", "T01", "T02", "LAB01"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF01.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF02",
+      "title": "Context Engineering, Prompting & AI Agent Control",
+      "type": "PDF_GUIDE",
+      "tier": "FOUNDATION",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Agent mental model",
+          "topics": [
+            "LLM, agent, tools, environment and context",
+            "capabilities and limitations",
+            "separating claims from evidence"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Spec-driven prompting",
+          "topics": [
+            "Objectives and acceptance criteria",
+            "inputs, output contracts and examples",
+            "constraints",
+            "scoping and non-goals"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Context engineering",
+          "topics": [
+            "Repository map and relevant docs",
+            "persistent memory",
+            "context window pressure and contradictions",
+            "selective reading"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Repository rules",
+          "topics": [
+            "AGENTS.md and CLAUDE.md conventions",
+            "hierarchy of instructions",
+            "rules vs. knowledge",
+            "minimal stable guidance"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Planning safely",
+          "topics": [
+            "Read-only investigation",
+            "impact mapping",
+            "dependency analysis",
+            "pre-edit plan",
+            "approvals for risky actions"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Controlled code editing",
+          "topics": [
+            "Diff review",
+            "small commits",
+            "branch strategy",
+            "no unrelated changes",
+            "rollback and checkpoint strategies"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "Investigation over guessing",
+          "topics": [
+            "Minimal reproductions",
+            "experiments",
+            "hypotheses and evidence",
+            "detecting placebo fixes"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Agent tool permissions",
+          "topics": [
+            "Terminal, browser and file access",
+            "APIs and MCP",
+            "prompt injection and least privilege",
+            "approval gates"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Anatomy of skills",
+          "topics": [
+            "SKILL.md frontmatter",
+            "references and scripts",
+            "installation scopes",
+            "testability and compatibility"
+          ]
+        },
+        {
+          "number": 10,
+          "title": "AI failure modes",
+          "topics": [
+            "Hallucinated modules",
+            "invented APIs",
+            "simulated green tests",
+            "task drift",
+            "circular repairs",
+            "unintended repo edits"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Sessions and handoffs",
+          "topics": [
+            "Compaction, loss of context and state reconstruction",
+            "decision records",
+            "handoff checkpoints"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "Verification-driven engineering",
+          "topics": [
+            "Tests and runtime evidence",
+            "independent reviewer",
+            "diff and contract checks",
+            "explicit uncertainty"
+          ]
+        },
+        {
+          "number": 13,
+          "title": "Advanced workflows",
+          "topics": [
+            "Spec-first, test-first, planning and testing separation",
+            "multiple agents with defined file ownership"
+          ]
+        },
+        {
+          "number": 14,
+          "title": "Privacy, cost and governance",
+          "topics": [
+            "Secrets, proprietary code, provider privacy",
+            "token/cost budgeting",
+            "audit and accountability"
+          ]
+        }
+      ],
+      "related": ["PPT01", "SK01", "SK12", "T06", "LAB01"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF02.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF03",
+      "title": "The Complete Application Anatomy",
+      "type": "PDF_GUIDE",
+      "tier": "BUILDER",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Product and website architecture",
+          "topics": [
+            "Public vs private vs admin surfaces",
+            "routing, subdomains and deployment",
+            "sitemap and information architecture"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Public website essentials",
+          "topics": [
+            "Homepage, features, pricing, FAQ, about, contact and support",
+            "documentation and terms",
+            "correct identity/disclosure"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Supporting and error pages",
+          "topics": [
+            "400, 401, 403, 404, 409, 422, 429, 500, 502, 503",
+            "maintenance and downtime",
+            "suspended, disabled, expired, unauthorized"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "SEO and social presence",
+          "topics": [
+            "Titles and descriptions, canonical and hreflang",
+            "sitemap robots redirects",
+            "Open Graph",
+            "structured data"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Registration and onboarding",
+          "topics": [
+            "Account creation",
+            "invite flows",
+            "verification and anti-abuse",
+            "initial project setup",
+            "incomplete onboarding"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Authentication lifecycle",
+          "topics": [
+            "Login, logout and reset",
+            "magic links/passkeys/MFA",
+            "session expiration and token revocation",
+            "concurrent sessions"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "Account management lifecycle",
+          "topics": [
+            "Profile and preferences",
+            "notifications",
+            "credentials",
+            "export",
+            "deletion, suspension, ownership transfer"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Teams and organizations",
+          "topics": [
+            "Roles and permissions",
+            "invite expiry and revocation",
+            "billing owner",
+            "tenant isolation",
+            "member removal"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Navigation and responsiveness",
+          "topics": [
+            "Menus, breadcrumb and search",
+            "mobile layouts",
+            "keyboard/shortcuts",
+            "persistence and focus"
+          ]
+        },
+        {
+          "number": 10,
+          "title": "UI component states",
+          "topics": [
+            "Inputs, tables, modals and uploads",
+            "disabled, loading, empty, pending, success, error",
+            "destructive confirmations"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "All asynchronous states",
+          "topics": [
+            "Offline/partial result",
+            "stale data",
+            "timeout and retry",
+            "polling and cancellation",
+            "optimistic update failure"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "Forms and validation",
+          "topics": [
+            "Client/server parity",
+            "errors and field-level help",
+            "duplicate submissions",
+            "draft saving and data-loss warning"
+          ]
+        },
+        {
+          "number": 13,
+          "title": "Accessibility end-to-end",
+          "topics": [
+            "Semantic structure",
+            "keyboard and focus",
+            "contrast and motion",
+            "assistive tech",
+            "error announcement"
+          ]
+        },
+        {
+          "number": 14,
+          "title": "Internationalization",
+          "topics": [
+            "Locale routing",
+            "timezone and DST",
+            "currency and decimal rules",
+            "Unicode, plurals and RTL"
+          ]
+        },
+        {
+          "number": 15,
+          "title": "CRUD and data workflows",
+          "topics": [
+            "Ownership and RBAC",
+            "soft/hard deletion",
+            "history and restore",
+            "bulk operations",
+            "concurrent edits"
+          ]
+        },
+        {
+          "number": 16,
+          "title": "Search, filtering, dashboards",
+          "topics": [
+            "Query design and pagination",
+            "filters and sorting",
+            "empty result",
+            "export and reporting"
+          ]
+        },
+        {
+          "number": 17,
+          "title": "Notifications and messaging",
+          "topics": [
+            "Email, in-app, push, SMS",
+            "preferences and unsubscribe",
+            "retries, deduplication and delivery failures"
+          ]
+        },
+        {
+          "number": 18,
+          "title": "Files and media",
+          "topics": [
+            "Size/type validation",
+            "malware and private storage",
+            "presigned URLs",
+            "transformations, deletion and retention"
+          ]
+        },
+        {
+          "number": 19,
+          "title": "Background and scheduled tasks",
+          "topics": [
+            "Queue and worker lifecycle",
+            "retries, idempotency, poison jobs",
+            "progress and cancellation"
+          ]
+        },
+        {
+          "number": 20,
+          "title": "Pricing and entitlements",
+          "topics": [
+            "Free/paid/trial",
+            "usage limits",
+            "feature flags",
+            "plan change",
+            "expiry and offline permissions"
+          ]
+        },
+        {
+          "number": 21,
+          "title": "Payments and subscriptions",
+          "topics": [
+            "Checkout and failures",
+            "provider reconciliation",
+            "refunds and charges",
+            "cancelled subscriptions and access"
+          ]
+        },
+        {
+          "number": 22,
+          "title": "Admin and back office",
+          "topics": [
+            "User and organization management",
+            "support",
+            "audit logs",
+            "sensitive actions",
+            "role separation"
+          ]
+        },
+        {
+          "number": 23,
+          "title": "Legal pages and business identity",
+          "topics": [
+            "Privacy, cookie/terms/sales/refund info as applicable",
+            "contact details",
+            "IP/attribution and notices"
+          ]
+        },
+        {
+          "number": 24,
+          "title": "Privacy lifecycle flows",
+          "topics": [
+            "Data export, deletion, consent management",
+            "processors",
+            "retention",
+            "backups and permitted exceptions"
+          ]
+        },
+        {
+          "number": 25,
+          "title": "Support and trust",
+          "topics": [
+            "Help center, tickets, incident notices, status when maintained",
+            "abusive use",
+            "feedback and complaints"
+          ]
+        },
+        {
+          "number": 26,
+          "title": "Infrastructure and operations",
+          "topics": [
+            "Dev/staging/prod",
+            "DNS/TLS, secret config",
+            "object storage",
+            "deploy and rollback",
+            "emails and backups"
+          ]
+        },
+        {
+          "number": 27,
+          "title": "Security and reliability",
+          "topics": [
+            "Authorization by resource",
+            "concurrency and data integrity",
+            "rate limits",
+            "failure handling"
+          ]
+        },
+        {
+          "number": 28,
+          "title": "Release and post-launch",
+          "topics": [
+            "Preflight checklist, evidence, owner acceptance",
+            "production smoke tests",
+            "support monitoring",
+            "vulnerability response"
+          ]
+        }
+      ],
+      "related": ["PPT02", "SK03", "T02", "T07", "BP01", "LAB02"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF03.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF04",
+      "title": "Full-Stack Implementation Patterns",
+      "type": "PDF_GUIDE",
+      "tier": "BUILDER",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Frontend architecture",
+          "topics": [
+            "Composition",
+            "layouts",
+            "SSR CSR SSG hydration",
+            "local/server/global state and typed contracts"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Backend architecture",
+          "topics": [
+            "Controller/service/domain/persistence",
+            "server-side authorization",
+            "consistent error and validation layers"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "API design",
+          "topics": [
+            "REST/GraphQL conventions",
+            "OpenAPI",
+            "schemas",
+            "errors",
+            "versioning",
+            "cursor pagination"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Data modelling",
+          "topics": [
+            "Entities, relationships and schema constraints",
+            "indexes",
+            "immutability and audit records"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Forms and state",
+          "topics": [
+            "Optimistic updates and rollback",
+            "validation",
+            "multi-step forms",
+            "duplicate submit prevention"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Authentication implementation",
+          "topics": [
+            "Secure sessions and tokens",
+            "authorization checks",
+            "lifecycle events"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "External integrations",
+          "topics": [
+            "Timeouts, retries, webhooks, signatures, rate limits, circuit breakers and fallbacks"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Storage and uploads",
+          "topics": [
+            "Public/private objects",
+            "validation",
+            "upload processing and metadata"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Realtime systems",
+          "topics": [
+            "WebSockets/SSE",
+            "reconnection",
+            "ordering, deduplication and permission changes"
+          ]
+        },
+        {
+          "number": 10,
+          "title": "Asynchronous jobs",
+          "topics": [
+            "Queues, idempotency, transaction-outbox",
+            "workers and dead-letter jobs"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Errors and observability",
+          "topics": [
+            "Structured errors and logs",
+            "correlation IDs",
+            "user-facing error codes"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "Reusable patterns",
+          "topics": [
+            "Adapters, repositories, dependency injection, service layering",
+            "avoid needless abstraction"
+          ]
+        },
+        {
+          "number": 13,
+          "title": "AI generated anti-patterns",
+          "topics": [
+            "Duplicated logic, god components, fake validation, frontend-only permission, overdependency"
+          ]
+        },
+        {
+          "number": 14,
+          "title": "End-to-end implementation workshop",
+          "topics": ["Specification to DB to API to UI, tests, docs and review"]
+        }
+      ],
+      "related": ["PPT02", "SK01", "T14", "LAB02"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF04.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF05",
+      "title": "Software Architecture, Data Integrity & Reliability",
+      "type": "PDF_GUIDE",
+      "tier": "PROFESSIONAL",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Architectural styles",
+          "topics": [
+            "Layered, hexagonal, modular monolith, distributed services",
+            "tradeoffs"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Domain modelling",
+          "topics": [
+            "Aggregates, entities and value objects",
+            "invariants and domain events"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Database performance",
+          "topics": [
+            "Indexes and query plans",
+            "N+1",
+            "appropriate denormalization",
+            "constraints"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Transactions and isolation",
+          "topics": [
+            "ACID",
+            "dirty/phantom reads",
+            "lost updates",
+            "serialization",
+            "deadlocks"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Concurrency",
+          "topics": [
+            "Locks, optimistic concurrency, atomic state transition, idempotency and outbox"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Schema evolution",
+          "topics": [
+            "Expand-contract",
+            "safe data migration",
+            "backfill",
+            "rollback and compatibility"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "Caching",
+          "topics": [
+            "TTL, stale state and invalidation",
+            "tenant leak",
+            "cache stampede"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Event-driven systems",
+          "topics": [
+            "Delivery and ordering semantics",
+            "retry and dedup",
+            "transactional outbox"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Horizontal scaling",
+          "topics": [
+            "Statelessness",
+            "pools",
+            "message workers",
+            "load balancing",
+            "hot spots"
+          ]
+        },
+        {
+          "number": 10,
+          "title": "Performance engineering",
+          "topics": [
+            "Profiling, load/stress/soak",
+            "queues and p95/p99",
+            "DB execution plans"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Resilience",
+          "topics": [
+            "Timeout, retry, circuit breaker, degradation, rate limiting and backpressure"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "Recovery",
+          "topics": [
+            "Backups, PITR, RPO/RTO, integrity, encrypted storage and restore drills"
+          ]
+        },
+        {
+          "number": 13,
+          "title": "Reviewing existing architecture",
+          "topics": [
+            "Risk and single points of failure",
+            "sustainable refactoring roadmap"
+          ]
+        }
+      ],
+      "related": ["PPT03", "SK06", "T15", "T34", "LAB03"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF05.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF06",
+      "title": "Security, Testing & Production Quality",
+      "type": "PDF_GUIDE",
+      "tier": "PROFESSIONAL",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Secure development lifecycle",
+          "topics": [
+            "Threat modelling",
+            "SSDF",
+            "review and security acceptance"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Authentication security",
+          "topics": [
+            "Password hashing, passkeys, MFA, lockout, recovery and session revocation"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Authorization",
+          "topics": [
+            "RBAC/ABAC, ownership, BOLA/IDOR, tenant isolation and service credentials"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Web application security",
+          "topics": [
+            "XSS, CSRF, injection, SSRF, clickjacking, open redirect, dangerous file upload"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "API security",
+          "topics": [
+            "Broken object/function auth, mass assignment, excessive data exposure and rate limits"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Cryptography and secrets",
+          "topics": [
+            "Key management, signing, rotation, secret log redaction, proper primitives"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "Supply chain",
+          "topics": [
+            "Third-party dependencies, lockfile and SBOM",
+            "provenance, version security"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Test strategy",
+          "topics": [
+            "Unit, integration, contracts, E2E and regression",
+            "cost-benefit and scope"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Advanced tests",
+          "topics": [
+            "Property based, fuzz, mutation, negative, race and failure injection"
+          ]
+        },
+        {
+          "number": 10,
+          "title": "AI code testing risks",
+          "topics": [
+            "Hallucinated passing tests, shallow mocks, tests mutated to pass, false coverage"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Quality gates",
+          "topics": [
+            "CI/CD lint, type, build, scan, tests, review, deployment approvals"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "Production hardening",
+          "topics": [
+            "TLS, CORS, CSP/security headers, config, least privilege and logs"
+          ]
+        },
+        {
+          "number": 13,
+          "title": "Accessibility quality",
+          "topics": ["WCAG/keyboard, screen readers and manual validation"]
+        },
+        {
+          "number": 14,
+          "title": "Release evidence",
+          "topics": [
+            "Blockers, known risks, signoff, test results and incident readiness"
+          ]
+        }
+      ],
+      "related": ["PPT03", "SK05", "SK07", "LAB03"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF06.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF07",
+      "title": "Digital Business, Payments & Subscription Engineering",
+      "type": "PDF_GUIDE",
+      "tier": "BUSINESS",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Digital business types",
+          "topics": [
+            "SaaS, ecommerce, marketplaces, educational products and AI service pricing"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Plans and entitlements",
+          "topics": [
+            "Free/premium, metered use, trials, quotas and seat licensing"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Checkout engineering",
+          "topics": [
+            "Order summary and totals",
+            "addresses, currencies, taxes",
+            "validation"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Payment state machines",
+          "topics": [
+            "Authorized, captured, pending, failed, disputed",
+            "3DS and redirect"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Webhook safety",
+          "topics": [
+            "Signatures, retries, duplicate/out of order events and reconciliation"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Subscription lifecycle",
+          "topics": [
+            "Renewal, failure, grace, trial, upgrade/downgrade, cancellation and expiration"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "Entitlements",
+          "topics": [
+            "Server-side feature and usage checks",
+            "eventual consistency and caching"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Invoices and taxes",
+          "topics": [
+            "Provider MoR vs direct billing",
+            "jurisdiction and financial records"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Refunds and disputes",
+          "topics": [
+            "Partial refund, chargeback, reversals, statutory rights, retention of records"
+          ]
+        },
+        {
+          "number": 10,
+          "title": "Customer operations",
+          "topics": [
+            "Receipts, dunning, cancellation support, complaints and support"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Analytics and economics",
+          "topics": [
+            "MRR, ARR, churn, conversion, unit economics, API and infrastructure costs"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "Fraud and abuse",
+          "topics": [
+            "Trial abuse, stolen payment methods, automation and fairness"
+          ]
+        },
+        {
+          "number": 13,
+          "title": "Billing recovery",
+          "topics": [
+            "Provider outage, stale state, reconciliation, provider switch, audit"
+          ]
+        }
+      ],
+      "related": ["PPT04", "SK08", "T26", "T27", "LAB04"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF07.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF08",
+      "title": "Legal, Privacy, Accessibility & Compliance Engineering",
+      "type": "PDF_GUIDE",
+      "tier": "BUSINESS",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Jurisdiction and classification",
+          "topics": [
+            "Operator country, target countries, B2B/B2C, regulated sectors, minors"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Operator identification",
+          "topics": [
+            "Imprint, legal name, business registration, contact and trading disclosures"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Data protection fundamentals",
+          "topics": [
+            "Personal data, controllers/processors, legal bases, purpose and minimization"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Privacy notice anatomy",
+          "topics": [
+            "Categories, purposes, recipients, transfers, retention, rights and changes"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Cookies and tracking",
+          "topics": [
+            "Classify purposes, necessary/nonessential, consent/withdrawal, records and analytics"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Terms of use",
+          "topics": [
+            "Service scope, acceptable use, user content, suspension, limitations"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "Consumer digital rights",
+          "topics": [
+            "Precontract info, digital conformity, withdrawal rights/conditions, refunds and complaints"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Subscription transparency",
+          "topics": [
+            "Renewals, clear prices, cancellation, confirmation, dark patterns"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Data subject requests",
+          "topics": [
+            "Access, portability, deletion, restrictions, objection, exceptions and evidence"
+          ]
+        },
+        {
+          "number": 10,
+          "title": "Vendors and transfers",
+          "topics": [
+            "Hosting, analytics, AI vendors, processors, agreements and cross-border transfer"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Security incidents and breach reporting",
+          "topics": [
+            "Assessment and response, notification applicability, records"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "Accessibility law",
+          "topics": [
+            "WCAG vs legal obligation",
+            "EU accessibility rules, national exceptions, audit"
+          ]
+        },
+        {
+          "number": 13,
+          "title": "Intellectual property",
+          "topics": [
+            "Open source licenses, assets, fonts, images, trademarks, AI-generated rights"
+          ]
+        },
+        {
+          "number": 14,
+          "title": "Online content/platforms",
+          "topics": [
+            "User-generated content moderation, takedowns and platform law applicability"
+          ]
+        },
+        {
+          "number": 15,
+          "title": "AI-specific regulation",
+          "topics": [
+            "AI Act applicability, transparency, high-risk roles and provider/operator responsibilities"
+          ]
+        },
+        {
+          "number": 16,
+          "title": "Sector / national variations",
+          "topics": [
+            "Health, finance, education, minors and regulated professional services"
+          ]
+        },
+        {
+          "number": 17,
+          "title": "UI implementation of legal obligations",
+          "topics": [
+            "Footer, sign-up notice, checkout info, consent dialogs, deletion/export flows"
+          ]
+        },
+        {
+          "number": 18,
+          "title": "Compliance readiness assessment",
+          "topics": [
+            "Obligations vs not applicable, legal reviewer, tests and evidences"
+          ]
+        }
+      ],
+      "related": ["PPT04", "SK09", "T29", "T30", "LAB04"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF08.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF09",
+      "title": "The Edge Case Encyclopedia — 100 Engineering Failure Scenarios",
+      "type": "PDF_GUIDE",
+      "tier": "EXPERT",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "AI agent failures",
+          "topics": [
+            "Context loss, fabricated APIs, accidental unrelated edits, corrupt tests, loops, false claims"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Authentication and permissions",
+          "topics": [
+            "Cross-user/tenant leak, revoked sessions, broken access, invitation mismanagement"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Database integrity",
+          "topics": [
+            "Race, deadlocks, migrations, duplicate data, time zones, Unicode and rounding"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Payments",
+          "topics": [
+            "Repeated webhooks, pending access, refunds, inconsistent billing and fraud"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Frontend/UX",
+          "topics": [
+            "Hydration mismatch, async race, unsaved forms, stale data, accessibility"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Backend and integrations",
+          "topics": [
+            "Retry storms, partial failure, rate limits, payload contracts, inconsistent pagination"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "Security and supply chain",
+          "topics": [
+            "Secret leak, compromised package, unsafe uploads, XSS and prompt injection"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Infrastructure and deployment",
+          "topics": [
+            "Config drift, rollback, DNS/TLS outages, worker failures, storage and quota"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Performance",
+          "topics": [
+            "Memory leaks, slow queries, stampede, p95/p99 latency, unexpected AI spend"
+          ]
+        },
+        {
+          "number": 10,
+          "title": "Operations and business",
+          "topics": [
+            "Deletion incomplete, active billing after closure, consent inconsistency, support failure"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Case-by-case evidence model",
+          "topics": [
+            "Symptom",
+            "reproduction",
+            "causal explanation",
+            "fix",
+            "tests",
+            "preventive control",
+            "skill cross-links"
+          ]
+        }
+      ],
+      "related": ["PPT05", "SK10", "SK11", "LAB05"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF09.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF10",
+      "title": "Advanced Debugging, Incident Response & Recovery",
+      "type": "PDF_GUIDE",
+      "tier": "EXPERT",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Systematic debugging",
+          "topics": [
+            "Observe versus hypothesize",
+            "control variables and evidence"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Bug taxonomy",
+          "topics": [
+            "State, logic, data, concurrency, environment, integration and infrastructure"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Reproducibility",
+          "topics": [
+            "Minimal reproduction",
+            "synthetic fixtures",
+            "intermittent failure triggers"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Logs, metrics, traces",
+          "topics": [
+            "Structured telemetry, correlation IDs, privacy-aware evidence"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Investigation methods",
+          "topics": [
+            "Hypothesis matrix, Git bisect, profiling, diff and impact"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Root cause analysis",
+          "topics": ["Five whys, causal graphs, systemic contributory factors"]
+        },
+        {
+          "number": 7,
+          "title": "Distributed failure investigation",
+          "topics": [
+            "Duplicates, out of order events, eventual consistency and partial success"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Incident command",
+          "topics": [
+            "Severity, containment, communication, coordination and recovery"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Safe recovery",
+          "topics": ["Rollback, feature flags, hotfix, backup restore, replay"]
+        },
+        {
+          "number": 10,
+          "title": "Regression prevention",
+          "topics": [
+            "Narrow fixes, reproductive tests, contract impact and review"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Postmortems",
+          "topics": [
+            "Timeline, blast radius, evidence, learning and corrective actions"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "AI-assisted incident response",
+          "topics": [
+            "Read-only audit, approvals, agent limitations and independent validation"
+          ]
+        }
+      ],
+      "related": ["PPT05", "SK10", "T35", "LAB05"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF10.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF11",
+      "title": "Autonomous Agents, Orchestration & Advanced AI Architecture",
+      "type": "PDF_GUIDE",
+      "tier": "ARCHITECT",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Agent architecture",
+          "topics": [
+            "Model, tools, context, memory, instructions and autonomy boundaries"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Skill modularity",
+          "topics": [
+            "Manifests, progressive disclosure, deterministic scripts and test harness"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Task decomposition",
+          "topics": [
+            "Dependency graphs, vertical slices, parallel tasks, acceptance"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Multi-agent roles",
+          "topics": [
+            "Architect, coder, tester, security auditor, reviewer and orchestrator"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Shared context",
+          "topics": [
+            "Documents of truth, compaction, reentrancy, handoffs, decision log"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Tool permissions",
+          "topics": [
+            "Sandbox, minimum privilege, destructive-operation approvals and credential isolation"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "MCP integration",
+          "topics": [
+            "Auth, external inputs, prompt injection, tool trust and failure handling"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Automated development pipeline",
+          "topics": [
+            "Specification, implementation, quality gates and evidence"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Agent failures",
+          "topics": [
+            "Loops, false positives, tool misuse, instruction collision, context drift"
+          ]
+        },
+        {
+          "number": 10,
+          "title": "Independent verification",
+          "topics": [
+            "Reviews, external tests, source evidence and human approval"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Cost and latency",
+          "topics": ["Model choice, limits, budgets, measuring value and cache"]
+        },
+        {
+          "number": 12,
+          "title": "Portable agent suite",
+          "topics": [
+            "Codex, Claude and generic adapters, versioning, installation and support"
+          ]
+        }
+      ],
+      "related": ["PPT06", "SK12", "LAB06"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF11.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PDF12",
+      "title": "AI Engineering Governance, Evaluation & Continuous Improvement",
+      "type": "PDF_GUIDE",
+      "tier": "ARCHITECT",
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Engineering governance",
+          "topics": [
+            "Roles, approvals, policy, exceptions and human accountability"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Traceability",
+          "topics": ["Requirements to code to tests to evidence, revisions"]
+        },
+        {
+          "number": 3,
+          "title": "Evaluation",
+          "topics": [
+            "Benchmarks, reproducibility, negative scenarios, control groups"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Skill QA",
+          "topics": [
+            "Correctness, false positives/negatives, run failures, regression compatibility"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Agent benchmarking",
+          "topics": ["Success, edits, incidents, time, token cost, quality"]
+        },
+        {
+          "number": 6,
+          "title": "Agent security governance",
+          "topics": ["Tools, secrets, least privilege, logs, audit and review"]
+        },
+        {
+          "number": 7,
+          "title": "Supply chain governance",
+          "topics": [
+            "SBOM, provenance, version tracking, packages and licenses"
+          ]
+        },
+        {
+          "number": 8,
+          "title": "Documentation governance",
+          "topics": ["Source quality, review dates, corrections, changelogs"]
+        },
+        {
+          "number": 9,
+          "title": "Risk-based release",
+          "topics": [
+            "Approvals, gradual rollout, flags, monitoring, exceptions"
+          ]
+        },
+        {
+          "number": 10,
+          "title": "Engineering quality metrics",
+          "topics": [
+            "Incident rate, time to recover, change failure, performance, a11y"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Maintenance",
+          "topics": [
+            "Technical debt, dependency upgrades, documentation decay, support end"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "Capstone assessment",
+          "topics": [
+            "Complete inherited app, uncover risks, fix, test, prepare launch and defend decisions"
+          ]
+        }
+      ],
+      "related": ["PPT06", "SK12", "T36", "LAB06"],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PDF12.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PPT01",
+      "title": "From Idea to Engineering Specification",
+      "type": "VISUAL_ATLAS",
+      "tier": "FOUNDATION",
+      "sections": [
+        "Idea-to-product lifecycle and gates",
+        "Engineering roles and responsibilities",
+        "Problem assumptions and discovery map",
+        "Personas/stakeholders/actors",
+        "User journey diagrams",
+        "Functional feature and dependency graph",
+        "Functional vs nonfunctional requirement matrix",
+        "Architecture decision tree",
+        "Implementation phases/checkpoints",
+        "PRD / traceability visual walkthrough"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PPT01.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PPT02",
+      "title": "Complete Application Anatomy",
+      "type": "VISUAL_ATLAS",
+      "tier": "BUILDER",
+      "sections": [
+        "Full digital product map: public/private/admin/backend/data",
+        "Public website routes and SEO/legal content",
+        "Complete account lifecycle",
+        "Authentication, authorization and organizations",
+        "Navigation, components and responsive states",
+        "CRUD, data history, concurrency and restore",
+        "Messaging, async jobs and notifications",
+        "Checkout/subscription/entitlement state machines",
+        "Admin, support and audit operations",
+        "Privacy and legal notice placement",
+        "Production infrastructure, files and backups",
+        "Wall-size clickable product completeness systems map"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PPT02.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PPT03",
+      "title": "Secure Production Architecture",
+      "type": "VISUAL_ATLAS",
+      "tier": "PROFESSIONAL",
+      "sections": [
+        "Architecture styles and trust boundaries",
+        "Complete HTTP request and API flow",
+        "Account/session lifecycle",
+        "API attack surfaces and controls",
+        "Relational data/invariants/indexes",
+        "Isolation/deadlock/race diagrams",
+        "Caching and tenant invalidation",
+        "Queues, idempotency and outbox",
+        "Testing layers and CI gates",
+        "Secrets, network and TLS",
+        "Telemetry, performance and capacity",
+        "Backups, rollback and restore diagrams"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PPT03.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PPT04",
+      "title": "Digital Business & Compliance",
+      "type": "VISUAL_ATLAS",
+      "tier": "BUSINESS",
+      "sections": [
+        "Business models and pricing systems",
+        "Checkout and payment lifecycles",
+        "Subscription finite-state machine",
+        "Webhook signing, retries and reconciliation",
+        "Business identification/legal disclosures",
+        "Personal data classification and flow diagrams",
+        "Consent, preferences and opt-out",
+        "Rights requests and retention",
+        "Consumer precontract and digital rights",
+        "Third party processors/data transfers",
+        "Accessibility/legal conditionality",
+        "Business launch checklist with evidence"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PPT04.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PPT05",
+      "title": "Failure Engineering & Recovery",
+      "type": "VISUAL_ATLAS",
+      "tier": "EXPERT",
+      "sections": [
+        "Fault taxonomy",
+        "Symptom vs root cause diagrams",
+        "Decision-tree troubleshooting",
+        "Reproduction and experimental method",
+        "Races and locking timelines",
+        "Distributed partial failures and event ordering",
+        "Regression impact network",
+        "Incident command and severity",
+        "Rollback and restoration workflows",
+        "Postmortem causal graphs and corrective loops"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PPT05.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "PPT06",
+      "title": "Agent Architecture & Governance",
+      "type": "VISUAL_ATLAS",
+      "tier": "ARCHITECT",
+      "sections": [
+        "Anatomy of an agent",
+        "Skill manifest/modules/scripts/assets",
+        "Context and documentation map",
+        "Task dependency planner",
+        "Multiagent pipeline and ownership",
+        "Trust boundaries/permissions and prompt injection",
+        "Implementation and independent-review gates",
+        "Benchmark harness/evaluation method",
+        "Governance and traceability",
+        "Full agent engineering organization model"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/PPT06.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK01",
+      "title": "Project Intelligence Mapper",
+      "type": "AGENT_SKILL",
+      "tier": "FOUNDATION",
+      "objective": "Understand an existing repository before changing it",
+      "steps": [
+        "Detect stack and supported versions",
+        "inventory routes, entry points, schema and services",
+        "dependency graph",
+        "architecture map",
+        "unknowns/risks",
+        "persist agent-readable context"
+      ],
+      "inputs": "Repository tree, package files, migrations, documentation; read-only initially",
+      "outputs": "architecture-map.md; dependency-inventory.json; project-context.md; technical-risks.md",
+      "verification": "Golden fixture repos; correct IDs; evidence citations; no source edits by default",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK01.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK02",
+      "title": "Complete Product Architect",
+      "type": "AGENT_SKILL",
+      "tier": "FOUNDATION",
+      "objective": "Turn vague ideas into complete, verifiable product specifications",
+      "steps": [
+        "Interpret goals and users",
+        "discover business/technical constraints",
+        "functional and nonfunctional requirements",
+        "page/route inventory",
+        "permission model",
+        "edge flows",
+        "legal questions",
+        "architecture choices",
+        "implementation stages",
+        "verification matrix"
+      ],
+      "inputs": "Idea, country/business fields, stakeholder constraints and existing repo when provided",
+      "outputs": "PRD.md; feature-register.xlsx/csv; sitemap.md; permissions.csv; architecture-decision-records.md; implementation-plan.md",
+      "verification": "No invented critical decisions; explicit assumptions; conditional legal checks; compare output against complete reference briefs",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK02.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK03",
+      "title": "Product Completeness Auditor",
+      "type": "AGENT_SKILL",
+      "tier": "BUILDER",
+      "objective": "Identify forgotten parts of existing applications",
+      "steps": [
+        "Classify application",
+        "inspect routes and functional pages",
+        "enumerate onboarding, account lifecycle, admin, payments and offboarding",
+        "analyze error/loading states",
+        "catalog privacy/legal/support/ops gaps",
+        "score evidence and uncertainties"
+      ],
+      "inputs": "Repository, documented product model and optionally authorized app preview",
+      "outputs": "product-completeness-report.md; missing-flows.csv; applicability-matrix.json; remediation-roadmap.md",
+      "verification": "Route presence != functional flow; avoid claiming legal certification; measure false positives with deliberately incomplete apps",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK03.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK04",
+      "title": "UX & Accessibility Inspector",
+      "type": "AGENT_SKILL",
+      "tier": "BUILDER",
+      "objective": "Find usability and accessibility defects",
+      "steps": [
+        "Page/information hierarchy",
+        "component states",
+        "keyboard/focus",
+        "labels",
+        "contrast",
+        "forms",
+        "responsivity",
+        "async errors",
+        "screen reader and manual review recommendations",
+        "dark patterns"
+      ],
+      "inputs": "Accessible app/browser code and permitted preview",
+      "outputs": "ux-audit.md; a11y-findings.csv; reproduction-steps.md",
+      "verification": "Automated scans do not certify compliance; clear manual-test-required flags",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK04.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK05",
+      "title": "Security & Authorization Auditor",
+      "type": "AGENT_SKILL",
+      "tier": "PROFESSIONAL",
+      "objective": "Analyze security of authorized applications",
+      "steps": [
+        "Model attack surface",
+        "auth/session lifecycle",
+        "object access",
+        "multi-tenancy",
+        "validation",
+        "API",
+        "secrets",
+        "supply chain",
+        "logging",
+        "uploads",
+        "test cases",
+        "severity and evidence"
+      ],
+      "inputs": "Authorized repository and stated threat model",
+      "outputs": "security-findings.json; threat-model.md; remediation-plan.md; regression-tests/",
+      "verification": "No intrusive testing of third parties; avoid invented vulnerabilities; reports require source evidence",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK05.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK06",
+      "title": "Database Integrity Guardian",
+      "type": "AGENT_SKILL",
+      "tier": "PROFESSIONAL",
+      "objective": "Protect data correctness and migrations",
+      "steps": [
+        "Schema inference",
+        "indexes and constraints",
+        "orphan/duplicate risk",
+        "transaction/isolation and concurrent updates",
+        "migration backfills",
+        "retention",
+        "restore plan"
+      ],
+      "inputs": "Read-only schema and test fixture data; DBA approval for production",
+      "outputs": "database-integrity-report.md; invariants.json; migration-plan.md; test-fixtures/",
+      "verification": "Read-only default; no production data mutation without explicit authorization and recovery plan",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK06.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK07",
+      "title": "Regression & Testing Guardian",
+      "type": "AGENT_SKILL",
+      "tier": "PROFESSIONAL",
+      "objective": "Protect existing behavior across code changes",
+      "steps": [
+        "Diff impact map",
+        "contract identification",
+        "select and build unit/integration/e2e/negative/property tests",
+        "verify behavior and restored invariants",
+        "prevent changed-to-pass tests"
+      ],
+      "inputs": "Current diff, tests, repo context and requested requirements",
+      "outputs": "change-impact.md; test-results.json; regression-findings.md",
+      "verification": "Baseline must be observed; distinguish not-run, failed and passing; execute actual tests",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK07.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK08",
+      "title": "Payments & Subscription Engineer",
+      "type": "AGENT_SKILL",
+      "tier": "BUSINESS",
+      "objective": "Implement and validate robust payment lifecycles",
+      "steps": [
+        "Offer/entitlement model",
+        "checkout mapping",
+        "provider confirmation",
+        "webhook signatures",
+        "retry/idempotency",
+        "subscription state",
+        "refunds, chargebacks, invoice reconciliation",
+        "error handling"
+      ],
+      "inputs": "Payment sandbox provider credentials and application repo",
+      "outputs": "payment-state-machine.md; webhook-matrix.csv; reconciliation-plan.md; payment-tests/",
+      "verification": "Sandbox only by default; mock/payment evidence; no real payments without authorization",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK08.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK09",
+      "title": "Legal & Compliance Readiness",
+      "type": "AGENT_SKILL",
+      "tier": "BUSINESS",
+      "objective": "Identify applicable obligations for digital products",
+      "steps": [
+        "Determine legal operator, geography, B2B/B2C, tracking, data mapping and suppliers",
+        "list required disclosures and consumer flow",
+        "copyright/accessibility/AI rules when applicable",
+        "identify legal review needs"
+      ],
+      "inputs": "Jurisdiction, product model, data flows, supplier list",
+      "outputs": "legal-applicability-matrix.csv; disclosure-inventory.md; privacy-gaps.md; lawyer-review-questions.md",
+      "verification": "Educational readiness assessment not legal advice; no blanket compliance certification",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK09.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK10",
+      "title": "Root Cause Investigator",
+      "type": "AGENT_SKILL",
+      "tier": "EXPERT",
+      "objective": "Reproduce and trace difficult defects",
+      "steps": [
+        "Collect symptom/logs",
+        "classify issue",
+        "recent changes",
+        "hypothesis matrix",
+        "controlled reproduction",
+        "isolate cause",
+        "minimal patch proposal",
+        "regression tests",
+        "postmortem"
+      ],
+      "inputs": "Authorized repo, sanitized logs, reproducible symptom, environment constraints",
+      "outputs": "root-cause-analysis.md; minimal-reproduction/; verification-results.json",
+      "verification": "Do not change production before permission; do not conclude without evidence",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK10.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK11",
+      "title": "Production Readiness Commander",
+      "type": "AGENT_SKILL",
+      "tier": "EXPERT",
+      "objective": "Make evidence-based go/no-go release decisions",
+      "steps": [
+        "Build/CI/test state, secrets/config, DB migration plan, object access, payment provider, DNS/TLS, email, legal, backup/restore, logs, capacity, fallback/rollback, support readiness"
+      ],
+      "inputs": "Repository, deployment manifests, available staging checks and release data",
+      "outputs": "go-no-go-report.md; blockers.csv; deploy-checklist.md; rollback.md",
+      "verification": "Must block when evidence missing; no claim of production readiness from code inspection alone",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK11.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "SK12",
+      "title": "Multi-Agent Engineering Orchestrator",
+      "type": "AGENT_SKILL",
+      "tier": "ARCHITECT",
+      "objective": "Coordinate safe multiagent changes",
+      "steps": [
+        "Task dependency mapping, agent specialization, context budget, ownership boundaries, tool permissions, parallel execution, integration, independent review and tests, cost/time logging"
+      ],
+      "inputs": "Goal, repository, agent capabilities and authorization limits",
+      "outputs": "task-graph.md; ownership-matrix.csv; integrated-diff-summary.md; verification-report.md",
+      "verification": "No conflicting simultaneous file writes; separate agent claims from executed validation",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/SK12.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T01",
+      "title": "Product Requirements Document",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Objectives",
+        "audiences",
+        "scope",
+        "functional/nonfunctional requirements",
+        "risks",
+        "metrics",
+        "assumptions",
+        "acceptance"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T01.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T02",
+      "title": "Universal Product Scope Register",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "40 domains",
+        "nested requirements",
+        "applicability",
+        "priority",
+        "owner",
+        "proof",
+        "implementation state",
+        "reference IDs"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T02.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T03",
+      "title": "Stakeholder & Role Matrix",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Actors",
+        "authority",
+        "responsibilities",
+        "roles",
+        "permissions",
+        "transfer/escalation and prohibited actions"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T03.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T04",
+      "title": "Requirements Traceability Matrix",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Requirement ID",
+        "source",
+        "implementation",
+        "test ID",
+        "evidence",
+        "status",
+        "change history"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T04.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T05",
+      "title": "User Journey & Use Case Map",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Actors",
+        "triggers",
+        "preconditions",
+        "happy path",
+        "alternate path",
+        "failure",
+        "postconditions"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T05.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T06",
+      "title": "Architecture Decision Record",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Context",
+        "options",
+        "selection",
+        "trade-offs",
+        "outcomes",
+        "approval",
+        "review date"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T06.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T07",
+      "title": "Page & Route Inventory",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Route",
+        "purpose",
+        "auth",
+        "role",
+        "content",
+        "page states",
+        "analytics",
+        "SEO",
+        "accessibility",
+        "legal"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T07.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T08",
+      "title": "UI States & Interaction Matrix",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Empty/loading/success/error/offline/expired/forbidden",
+        "copy",
+        "transition",
+        "retries",
+        "QA"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T08.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T09",
+      "title": "Authorization & Permission Matrix",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Actor",
+        "role",
+        "tenant",
+        "resource",
+        "operation",
+        "constraints",
+        "allow/deny tests"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T09.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T10",
+      "title": "Localization Specification",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Locales",
+        "timezone/DST",
+        "currency",
+        "number/date",
+        "plural",
+        "RTL",
+        "text growth",
+        "fallback"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T10.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T11",
+      "title": "Notification & Email Inventory",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Trigger",
+        "recipient",
+        "channel",
+        "template",
+        "consent",
+        "retries",
+        "dedupe",
+        "delivery status"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T11.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T12",
+      "title": "Accessibility Audit Workbook",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Criterion",
+        "page/component",
+        "automated/manual checks",
+        "status",
+        "evidence",
+        "risk",
+        "remediation"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T12.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T13",
+      "title": "Database Schema & Data Dictionary",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Entities",
+        "keys",
+        "types",
+        "relationships",
+        "indexes",
+        "constraints",
+        "sensitivity",
+        "retention"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T13.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T14",
+      "title": "API Contract Specification",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Endpoints",
+        "methods",
+        "auth",
+        "schemas",
+        "errors",
+        "pagination",
+        "limits",
+        "version",
+        "samples"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T14.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T15",
+      "title": "Concurrency & Transaction Matrix",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Operation",
+        "invariant",
+        "isolation",
+        "locks",
+        "idempotency",
+        "retries",
+        "race tests"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T15.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T16",
+      "title": "Third-Party Integration Register",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Vendor",
+        "purpose",
+        "data sent",
+        "secret",
+        "rate limits",
+        "SLA",
+        "fallback",
+        "costs",
+        "owner"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T16.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T17",
+      "title": "Background Jobs & Events Register",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Event",
+        "producer",
+        "consumer",
+        "payload",
+        "queue",
+        "retry",
+        "timeout",
+        "idempotency",
+        "dead letter"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T17.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T18",
+      "title": "Data Lifecycle & Retention Matrix",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Collection",
+        "purpose",
+        "legal basis",
+        "storage",
+        "access",
+        "export",
+        "retention",
+        "deletion",
+        "backups"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T18.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T19",
+      "title": "Threat Model & Risk Register",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Assets",
+        "threats",
+        "trust boundaries",
+        "risk",
+        "mitigation",
+        "evidence",
+        "residual risk"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T19.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T20",
+      "title": "Master Test Plan",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Coverage levels",
+        "environment",
+        "test classes",
+        "acceptance criteria",
+        "blockers",
+        "responsibilities"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T20.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T21",
+      "title": "Test Cases & Fixtures Catalog",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Test ID",
+        "positive/negative/edge",
+        "fixture",
+        "steps",
+        "expected",
+        "observed",
+        "result"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T21.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T22",
+      "title": "Regression Impact Matrix",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Change",
+        "affected modules",
+        "contracts",
+        "tests",
+        "risk",
+        "evidence",
+        "reviewer"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T22.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T23",
+      "title": "CI/CD Quality Gates",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Commands",
+        "thresholds",
+        "scan",
+        "approval",
+        "artifact",
+        "status",
+        "exception owner"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T23.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T24",
+      "title": "Dependency & Supply Chain Register",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Name",
+        "version",
+        "source",
+        "license",
+        "vulnerability",
+        "update policy",
+        "SBOM",
+        "maintainer"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T24.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T25",
+      "title": "Business Model & Pricing Specification",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Models",
+        "plans",
+        "quotas",
+        "trials",
+        "currency",
+        "taxes",
+        "discounts",
+        "entitlements"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T25.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T26",
+      "title": "Checkout & Payment State Matrix",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Status",
+        "provider event",
+        "business effect",
+        "retry",
+        "refund",
+        "webhook",
+        "reconciliation"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T26.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T27",
+      "title": "Subscription Lifecycle Specification",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Trial",
+        "active",
+        "failed",
+        "grace",
+        "renewal",
+        "upgrade",
+        "downgrade",
+        "cancel",
+        "expired"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T27.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T28",
+      "title": "Financial Reconciliation Workbook",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Order",
+        "invoice",
+        "provider record",
+        "amount",
+        "currency",
+        "refund",
+        "discrepancy",
+        "resolution"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T28.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T29",
+      "title": "Legal Applicability Matrix",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Jurisdiction",
+        "operator",
+        "obligation",
+        "condition",
+        "source",
+        "document",
+        "reviewer",
+        "status"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T29.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T30",
+      "title": "Privacy & Cookie Compliance Workbook",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Treatments",
+        "consent",
+        "cookies",
+        "vendor",
+        "purpose",
+        "legal basis",
+        "retention",
+        "rights"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T30.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T31",
+      "title": "Vendor & Data Processor Register",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Vendor",
+        "system",
+        "contract",
+        "category",
+        "geography",
+        "subprocessors",
+        "review",
+        "risk"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T31.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T32",
+      "title": "Asset & Intellectual Property Register",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Image/font/code/license/owner",
+        "attribution",
+        "rights",
+        "source",
+        "resale permissions"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T32.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T33",
+      "title": "Production Operations Runbook",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Service",
+        "owner",
+        "allowed commands",
+        "monitoring",
+        "alarms",
+        "recovery",
+        "escalation"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T33.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T34",
+      "title": "Backup & Disaster Recovery Plan",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "System",
+        "backup method",
+        "frequency",
+        "retention",
+        "RPO/RTO",
+        "restore test",
+        "owner"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T34.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T35",
+      "title": "Incident Report & Postmortem",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Severity",
+        "timeline",
+        "impact",
+        "evidence",
+        "cause",
+        "recovery",
+        "preventive action"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T35.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "T36",
+      "title": "Launch Go/No-Go Checklist",
+      "type": "TEMPLATE",
+      "tier": "CROSS_LEVEL",
+      "fields": [
+        "Blockers",
+        "release gate",
+        "proof",
+        "signoff",
+        "rollback",
+        "initial production smoke test"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/T36.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "LAB01",
+      "title": "The Incomplete Product Brief",
+      "type": "LAB",
+      "tier": "FOUNDATION",
+      "steps": [
+        "Interpret a deliberately vague brief",
+        "Discover missing requirements",
+        "Identify actors and authorizations",
+        "Map all routes and pages",
+        "Specify journeys and error paths",
+        "Identify performance/privacy/legal questions",
+        "Risk and constraint analysis",
+        "Author full PRD, acceptance tests and traceability",
+        "Produce safe agent task plan",
+        "Audit plan for omissions"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/LAB01.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "LAB02",
+      "title": "Build a Complete SaaS",
+      "type": "LAB",
+      "tier": "BUILDER",
+      "steps": [
+        "Architecture and environment",
+        "Postgres schema and migrations",
+        "Register/login/recovery",
+        "Organizations and invitations",
+        "RBAC tenant isolation",
+        "Main dashboard and CRUD",
+        "Loading/error/empty UX states",
+        "Admin and configuration",
+        "Transactional notifications",
+        "Sandbox checkout and subscription flows",
+        "Applicable legal/info pages as reviewed examples",
+        "Testing/backup/deploy readiness"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/LAB02.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "LAB03",
+      "title": "The Vulnerable Application",
+      "type": "LAB",
+      "tier": "PROFESSIONAL",
+      "steps": [
+        "Threat-model scope",
+        "Authentication failure analysis",
+        "Authorization/IDOR reproduction in isolated test",
+        "Tenant isolation",
+        "API inputs and access controls",
+        "Dangerous uploads",
+        "Secrets and logs",
+        "Supply chain risks",
+        "Patch design",
+        "Regression tests",
+        "Security evidence report"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/LAB03.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "LAB04",
+      "title": "Launch a Digital Business",
+      "type": "LAB",
+      "tier": "BUSINESS",
+      "steps": [
+        "Plans and pricing rules",
+        "Entitlement guard",
+        "Sandbox provider integration",
+        "Raw signed webhooks",
+        "Double-delivery and out-of-order tests",
+        "Cancellation/refund state",
+        "Reconciliation",
+        "Personal data inventory",
+        "Legal applicability matrix and page placements",
+        "Rights requests and support flow",
+        "Operations/runbooks",
+        "Production go/no-go with blockers"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/LAB04.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "LAB05",
+      "title": "The Broken Production System",
+      "type": "LAB",
+      "tier": "EXPERT",
+      "steps": [
+        "Gather symptoms and logs",
+        "Minimal failure reproduction",
+        "Identify concurrent write bug",
+        "Repair data invariant",
+        "External API fallback",
+        "Find performance bottleneck",
+        "Safe migration planning",
+        "Simulate failed deployment",
+        "Perform rollback",
+        "Backup restore drill",
+        "Regression test",
+        "Postmortem"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/LAB05.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "LAB06",
+      "title": "Autonomous Engineering Challenge",
+      "type": "LAB",
+      "tier": "ARCHITECT",
+      "steps": [
+        "Map existing codebase",
+        "Interpret change request",
+        "Create dependency graph",
+        "Assign agent ownership",
+        "Control context and tools",
+        "Execute isolated parallel changes",
+        "Integrate diffs",
+        "Resolve conflicts",
+        "Run security/completeness skills",
+        "Independent test and review",
+        "Benchmark time/quality/cost",
+        "Write engineering report"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/LAB06.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "BP01",
+      "title": "SaaS Product Blueprint",
+      "type": "PRODUCT_BLUEPRINT",
+      "tier": "SPECIALIZATION",
+      "chapters": [
+        "Single vs multi-tenant",
+        "Registration and onboarding",
+        "Organization/team creation",
+        "Invitations and roles",
+        "Entitlements/quotas",
+        "Recurring and one-off billing",
+        "Trial and cancellation",
+        "Support/admin",
+        "Usage and infrastructure cost",
+        "Cross-tenant security",
+        "Data export/erasure",
+        "Public API and webhook interoperability",
+        "Scale/observability",
+        "Specific failure cases"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/BP01.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "BP02",
+      "title": "E-commerce Blueprint",
+      "type": "PRODUCT_BLUEPRINT",
+      "tier": "SPECIALIZATION",
+      "chapters": [
+        "Catalog and hierarchy",
+        "Attributes and variants",
+        "Price and tax",
+        "Inventory and reservations",
+        "Cart/session",
+        "Checkout",
+        "Shipping and fulfillment",
+        "Order lifecycle",
+        "Refund/returns",
+        "Invoices and documents",
+        "Customer area",
+        "Discount and promotional logic",
+        "Back office",
+        "Carriers and payment integrations",
+        "Consumer compliance",
+        "Race and stock consistency"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/BP02.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "BP03",
+      "title": "Marketplace Blueprint",
+      "type": "PRODUCT_BLUEPRINT",
+      "tier": "SPECIALIZATION",
+      "chapters": [
+        "Seller registration/onboarding",
+        "Identity/verification when required",
+        "Profiles and listings",
+        "Search/recommendation",
+        "Moderation/reporting",
+        "Buying/contracting",
+        "Platform fees",
+        "Provider split payouts where eligible",
+        "Refunds and disputes",
+        "Reviews/reputation",
+        "Buyer and seller safety",
+        "Complaints and takedowns",
+        "Platform law obligations",
+        "Tax/documentation",
+        "Fraud controls",
+        "Vendor exit/offboarding"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/BP03.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "BP04",
+      "title": "AI-Powered Product Blueprint",
+      "type": "PRODUCT_BLUEPRINT",
+      "tier": "SPECIALIZATION",
+      "chapters": [
+        "Model/vendor selection",
+        "Input/output contracts",
+        "Prompt versioning",
+        "Context/RAG",
+        "Data handling and retention",
+        "Token pricing/budget",
+        "Quotas/rate limits",
+        "Prompt injection and exfiltration",
+        "Tool authorization",
+        "Evaluation/ground truth",
+        "Hallucination handling",
+        "Tracing/cost observability",
+        "Human review",
+        "Data processor contracts",
+        "AI regulation applicability",
+        "Failure modes"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/BP04.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "BP05",
+      "title": "Community & Social Platform Blueprint",
+      "type": "PRODUCT_BLUEPRINT",
+      "tier": "SPECIALIZATION",
+      "chapters": [
+        "Accounts/profiles",
+        "Posts/comments",
+        "Direct messages",
+        "Relationships/groups",
+        "Visibility and permissions",
+        "Notification controls",
+        "Search/discovery",
+        "Media uploads",
+        "Moderation roles",
+        "Reporting/appeals",
+        "Suspensions/blocks",
+        "User privacy",
+        "Removal/retention",
+        "Minors and safety when relevant",
+        "Spam/abuse",
+        "Scale and content consistency"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/BP05.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "BP06",
+      "title": "Mobile Application Blueprint",
+      "type": "PRODUCT_BLUEPRINT",
+      "tier": "SPECIALIZATION",
+      "chapters": [
+        "Native/hybrid choice",
+        "OS lifecycle",
+        "Navigation/state",
+        "Device permissions",
+        "Secure local storage",
+        "Authentication",
+        "Offline data",
+        "Sync/conflicts",
+        "Push notifications",
+        "Background jobs",
+        "Deep links",
+        "App updates/migrations",
+        "Crash reporting",
+        "App store release",
+        "In-app purchases and policies",
+        "Privacy/a11y/store compliance"
+      ],
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/BP06.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "BUNDLE-BUILDER",
+      "title": "Builder Edition",
+      "type": "BUNDLE",
+      "tier": "BUNDLE",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/BUNDLE-BUILDER.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "BUNDLE-PRO",
+      "title": "Professional Edition",
+      "type": "BUNDLE",
+      "tier": "BUNDLE",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/BUNDLE-PRO.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "BUNDLE-ULTIMATE",
+      "title": "Ultimate Engineering Library",
+      "type": "BUNDLE",
+      "tier": "BUNDLE",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/BUNDLE-ULTIMATE.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    },
+    {
+      "sku": "BUNDLE-MASTERY",
+      "title": "Complete Mastery Bundle",
+      "type": "BUNDLE",
+      "tier": "BUNDLE",
+      "status": "PLANNED",
+      "purchasable": false,
+      "published": false,
+      "coverAsset": "/covers/BUNDLE-MASTERY.svg",
+      "license": "TO_DEFINE",
+      "version": null,
+      "releaseDate": null,
+      "priceCents": null
+    }
+  ],
+  "edgeCases": [
+    {
+      "id": "EC-001",
+      "category": "Agent execution failures",
+      "title": "Context compacted and essential requirements forgotten",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-002",
+      "category": "Agent execution failures",
+      "title": "Fabricated SDK API accepted without verification",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-003",
+      "category": "Agent execution failures",
+      "title": "Unrelated files altered during a localized fix",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-004",
+      "category": "Agent execution failures",
+      "title": "Agent changes test expectation to pass",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-005",
+      "category": "Agent execution failures",
+      "title": "Repeated attempts cause a repair loop",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-006",
+      "category": "Agent execution failures",
+      "title": "Agent installs hallucinated package name",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-007",
+      "category": "Agent execution failures",
+      "title": "Parallel agents overwrite shared file",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-008",
+      "category": "Agent execution failures",
+      "title": "Stale instructions conflict with current architecture",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-009",
+      "category": "Agent execution failures",
+      "title": "Repository instructions contain malicious prompt injection",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-010",
+      "category": "Agent execution failures",
+      "title": "Agent claims tests passed without executing them",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-011",
+      "category": "Authentication and authorization",
+      "title": "Expired session survives password reset",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-012",
+      "category": "Authentication and authorization",
+      "title": "Refresh token race creates multiple active sessions",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-013",
+      "category": "Authentication and authorization",
+      "title": "User A can read User B object through IDOR",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-014",
+      "category": "Authentication and authorization",
+      "title": "Tenant A cache exposes Tenant B data",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-015",
+      "category": "Authentication and authorization",
+      "title": "Frontend hides forbidden action but API allows it",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-016",
+      "category": "Authentication and authorization",
+      "title": "Revoked invitation remains usable",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-017",
+      "category": "Authentication and authorization",
+      "title": "Email change bypasses identity re-verification",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-018",
+      "category": "Authentication and authorization",
+      "title": "Password recovery leaks account existence",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-019",
+      "category": "Authentication and authorization",
+      "title": "Suspended account retains active token",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-020",
+      "category": "Authentication and authorization",
+      "title": "Shared cache returns another user private page",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-021",
+      "category": "Database and data integrity",
+      "title": "Lost update during concurrent edits",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-022",
+      "category": "Database and data integrity",
+      "title": "Deadlock during batch processing",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-023",
+      "category": "Database and data integrity",
+      "title": "Destructive migration removes customer data",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-024",
+      "category": "Database and data integrity",
+      "title": "Missing foreign keys produce orphan records",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-025",
+      "category": "Database and data integrity",
+      "title": "Transaction partially applies business event",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-026",
+      "category": "Database and data integrity",
+      "title": "Double form submission creates duplicate record",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-027",
+      "category": "Database and data integrity",
+      "title": "Timezone DST makes booking expire incorrectly",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-028",
+      "category": "Database and data integrity",
+      "title": "Unicode normalization breaks unique handles",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-029",
+      "category": "Database and data integrity",
+      "title": "Floating-point rounding corrupts invoice totals",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-030",
+      "category": "Database and data integrity",
+      "title": "Backup passes creation but fails restore",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-031",
+      "category": "Payments and commerce",
+      "title": "Duplicate webhook grants entitlement twice",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-032",
+      "category": "Payments and commerce",
+      "title": "Out-of-order payment events revoke a paid order",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-033",
+      "category": "Payments and commerce",
+      "title": "Provider charge succeeds but local account remains pending",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-034",
+      "category": "Payments and commerce",
+      "title": "Refund processed but paid access remains active",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-035",
+      "category": "Payments and commerce",
+      "title": "Renewal failure ignored and access remains wrong",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-036",
+      "category": "Payments and commerce",
+      "title": "Free trial abuse bypasses eligibility constraints",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-037",
+      "category": "Payments and commerce",
+      "title": "Promotion code redeemable beyond intended limit",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-038",
+      "category": "Payments and commerce",
+      "title": "Checkout redirect returns before provider confirmation",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-039",
+      "category": "Payments and commerce",
+      "title": "Invoiced tax data diverges from transaction",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-040",
+      "category": "Payments and commerce",
+      "title": "Payment provider balance diverges from local ledger",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-041",
+      "category": "Frontend and user experience",
+      "title": "Nuxt hydration mismatch breaks controls",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-042",
+      "category": "Frontend and user experience",
+      "title": "Old response overwrites newer search results",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-043",
+      "category": "Frontend and user experience",
+      "title": "Button double-click submits twice",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-044",
+      "category": "Frontend and user experience",
+      "title": "Wizard loses input on browser reload",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-045",
+      "category": "Frontend and user experience",
+      "title": "Modal traps keyboard focus incorrectly",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-046",
+      "category": "Frontend and user experience",
+      "title": "Backend mutation succeeds but stale UI shows failure",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-047",
+      "category": "Frontend and user experience",
+      "title": "Offline state exposes silently unsaved changes",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-048",
+      "category": "Frontend and user experience",
+      "title": "Cache shows data from previous logged-in user",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-049",
+      "category": "Frontend and user experience",
+      "title": "Small mobile viewport makes footer inaccessible",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-050",
+      "category": "Frontend and user experience",
+      "title": "Expired session loops user between routes",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-051",
+      "category": "Backend APIs and integrations",
+      "title": "Rate limiter misconfigured behind proxy",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-052",
+      "category": "Backend APIs and integrations",
+      "title": "Remote API outage blocks core app",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-053",
+      "category": "Backend APIs and integrations",
+      "title": "Timeout leaves unknown transaction status",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-054",
+      "category": "Backend APIs and integrations",
+      "title": "Partial success on multi-service workflow",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-055",
+      "category": "Backend APIs and integrations",
+      "title": "Retry creates destructive duplicate operation",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-056",
+      "category": "Backend APIs and integrations",
+      "title": "SSRF via user-provided remote URL",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-057",
+      "category": "Backend APIs and integrations",
+      "title": "Unexpected optional field crashes parser",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-058",
+      "category": "Backend APIs and integrations",
+      "title": "Cursor pagination duplicates or omits records",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-059",
+      "category": "Backend APIs and integrations",
+      "title": "Third-party API version breaks contract",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-060",
+      "category": "Backend APIs and integrations",
+      "title": "Error swallowed by asynchronous worker",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-061",
+      "category": "Security and supply chain",
+      "title": "Production credentials committed into Git",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-062",
+      "category": "Security and supply chain",
+      "title": "Sensitive PII printed in application logs",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-063",
+      "category": "Security and supply chain",
+      "title": "Malicious transitive dependency executes script",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-064",
+      "category": "Security and supply chain",
+      "title": "Overprivileged admin API usable by editor",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-065",
+      "category": "Security and supply chain",
+      "title": "Malware smuggled via disguised file extension",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-066",
+      "category": "Security and supply chain",
+      "title": "Stored XSS through content/markdown rendering",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-067",
+      "category": "Security and supply chain",
+      "title": "Permissive CORS exposes authenticated endpoint",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-068",
+      "category": "Security and supply chain",
+      "title": "Token accidentally included in public build",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-069",
+      "category": "Security and supply chain",
+      "title": "Typosquatting library copied from agent suggestion",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-070",
+      "category": "Security and supply chain",
+      "title": "Agent tool obtains excessive file system access",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-071",
+      "category": "Infrastructure and deployment",
+      "title": "Wrong environment variables after promotion",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-072",
+      "category": "Infrastructure and deployment",
+      "title": "Database migration breaks backward compatibility",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-073",
+      "category": "Infrastructure and deployment",
+      "title": "Half-complete blue-green rollout",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-074",
+      "category": "Infrastructure and deployment",
+      "title": "Rollback restores code but not compatible schema",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-075",
+      "category": "Infrastructure and deployment",
+      "title": "Expired TLS cert blocks webhook callback",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-076",
+      "category": "Infrastructure and deployment",
+      "title": "Misconfigured DNS prevents login email links",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-077",
+      "category": "Infrastructure and deployment",
+      "title": "Object storage region mismatch denies downloads",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-078",
+      "category": "Infrastructure and deployment",
+      "title": "Worker process fails silently after deploy",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-079",
+      "category": "Infrastructure and deployment",
+      "title": "Node process OOM causes intermittent 502",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-080",
+      "category": "Infrastructure and deployment",
+      "title": "Staging config copied into production checkout",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-081",
+      "category": "Performance and scale",
+      "title": "Cache stampede after product drop",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-082",
+      "category": "Performance and scale",
+      "title": "N+1 queries on customer library",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-083",
+      "category": "Performance and scale",
+      "title": "Database connection pool exhausted",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-084",
+      "category": "Performance and scale",
+      "title": "Memory leak triggered by repeated previews",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-085",
+      "category": "Performance and scale",
+      "title": "Retry storm floods background queue",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-086",
+      "category": "Performance and scale",
+      "title": "Traffic burst overrun causes high p99 latency",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-087",
+      "category": "Performance and scale",
+      "title": "Heavy PDF previews block mobile main thread",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-088",
+      "category": "Performance and scale",
+      "title": "Unindexed filter query scales superlinearly",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-089",
+      "category": "Performance and scale",
+      "title": "Long transaction lock causes request pile-up",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-090",
+      "category": "Performance and scale",
+      "title": "LLM token usage produces unexpected provider bill",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-091",
+      "category": "Operations and business",
+      "title": "Account deletion leaves redundant data in provider",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-092",
+      "category": "Operations and business",
+      "title": "Complaint cannot be tracked to an owner",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-093",
+      "category": "Operations and business",
+      "title": "Closed account still charged for subscription",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-094",
+      "category": "Operations and business",
+      "title": "Consent preferences differ between tracker and DB",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-095",
+      "category": "Operations and business",
+      "title": "Transactional email bounces without fallback",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-096",
+      "category": "Operations and business",
+      "title": "Refunded order still appears purchasable/downloadable",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-097",
+      "category": "Operations and business",
+      "title": "Admin action not included in audit trail",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-098",
+      "category": "Operations and business",
+      "title": "Vendor sunset causes unavailable webhook endpoint",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-099",
+      "category": "Operations and business",
+      "title": "Customer loses access after email change",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    },
+    {
+      "id": "EC-100",
+      "category": "Operations and business",
+      "title": "Data incident has no escalation or communication plan",
+      "contentFormat": "symptom/trigger/impact/root-cause/reproduction/fix/test/prevention/cross-references",
+      "status": "PLANNED"
+    }
+  ],
+  "scopeDomains": [
+    {
+      "id": "SC-01",
+      "name": "Product Strategy",
+      "coverage": "Audience, scope, outcomes, nonfunctional needs, stakeholder assumptions"
+    },
+    {
+      "id": "SC-02",
+      "name": "Public Website",
+      "coverage": "Home, company/about, contact, features, pricing, FAQs, docs"
+    },
+    {
+      "id": "SC-03",
+      "name": "Legal Pages",
+      "coverage": "Operator identity, privacy, cookies, terms, sales/withdrawal conditions as applicable"
+    },
+    {
+      "id": "SC-04",
+      "name": "SEO & Discoverability",
+      "coverage": "Metadata, sitemap, robots, canonical, structured data and redirects"
+    },
+    {
+      "id": "SC-05",
+      "name": "User Onboarding",
+      "coverage": "Registration, invites, verification, initial setup and interrupted onboarding"
+    },
+    {
+      "id": "SC-06",
+      "name": "Authentication",
+      "coverage": "Login, logout, MFA, sessions, recovery, token revocation"
+    },
+    {
+      "id": "SC-07",
+      "name": "Authorization",
+      "coverage": "Roles, ownership, per-object permission, tenant isolation"
+    },
+    {
+      "id": "SC-08",
+      "name": "Account Lifecycle",
+      "coverage": "Profile, suspension, export, account closure, deletion and consent"
+    },
+    {
+      "id": "SC-09",
+      "name": "Organizations & Teams",
+      "coverage": "Members, invitations, roles, ownership transfers and team lifecycle"
+    },
+    {
+      "id": "SC-10",
+      "name": "Navigation & UX",
+      "coverage": "Menus, responsive layout, page hierarchy and components"
+    },
+    {
+      "id": "SC-11",
+      "name": "Interface States",
+      "coverage": "Loading, empty, error, timeout, offline, expired, success and forbidden"
+    },
+    {
+      "id": "SC-12",
+      "name": "Accessibility",
+      "coverage": "Semantics, keyboard, focus, contrast, motion, AT and usability"
+    },
+    {
+      "id": "SC-13",
+      "name": "Internationalization",
+      "coverage": "Dates, timezones, locale, money, Unicode and RTL"
+    },
+    {
+      "id": "SC-14",
+      "name": "Application Features",
+      "coverage": "Core CRUD, history, authorization and workflow edge cases"
+    },
+    {
+      "id": "SC-15",
+      "name": "Search & Reporting",
+      "coverage": "Filters, sort, pagination, analytics, dashboards and export"
+    },
+    {
+      "id": "SC-16",
+      "name": "Notifications",
+      "coverage": "Email/push/in-app, preferences, delivery, retries and unsubscribe"
+    },
+    {
+      "id": "SC-17",
+      "name": "Files & Media",
+      "coverage": "Upload, download, scanning, storage, access, deletion"
+    },
+    {
+      "id": "SC-18",
+      "name": "Backend & APIs",
+      "coverage": "Contracts, error codes, versioning, limits, validation"
+    },
+    {
+      "id": "SC-19",
+      "name": "Databases",
+      "coverage": "Integrity, schema, migrations, transactions, indexes, concurrency"
+    },
+    {
+      "id": "SC-20",
+      "name": "Background Jobs",
+      "coverage": "Events, queues, retry, idempotency, jobs, reconciliation"
+    },
+    {
+      "id": "SC-21",
+      "name": "Third-Party Services",
+      "coverage": "Contracts, limits, availability, fallback, privacy and cost"
+    },
+    {
+      "id": "SC-22",
+      "name": "Payments & Billing",
+      "coverage": "Checkout, renewals, receipts, failed charges, refunds, disputes"
+    },
+    {
+      "id": "SC-23",
+      "name": "Administration",
+      "coverage": "Operator workflows, approvals, support and audit logs"
+    },
+    {
+      "id": "SC-24",
+      "name": "Customer Support",
+      "coverage": "Documentation, FAQ, help, tickets, complaint channels"
+    },
+    {
+      "id": "SC-25",
+      "name": "Privacy & Data Protection",
+      "coverage": "Data mapping, transparency, rights, retention, suppliers"
+    },
+    {
+      "id": "SC-26",
+      "name": "Business Compliance",
+      "coverage": "Contracts, consumer law, invoice rules, licensing, sector obligations"
+    },
+    {
+      "id": "SC-27",
+      "name": "Security",
+      "coverage": "Threats, auth/access, secrets, storage, supply chain"
+    },
+    {
+      "id": "SC-28",
+      "name": "Quality Assurance",
+      "coverage": "Unit, integration, e2e, negative and evidence-based testing"
+    },
+    {
+      "id": "SC-29",
+      "name": "Analytics & Measurement",
+      "coverage": "Events, privacy, reporting and data quality"
+    },
+    {
+      "id": "SC-30",
+      "name": "Performance",
+      "coverage": "Latency, caching, DB efficiency, capacity and costs"
+    },
+    {
+      "id": "SC-31",
+      "name": "Infrastructure",
+      "coverage": "DNS, TLS, environment, hosting, storage and network"
+    },
+    {
+      "id": "SC-32",
+      "name": "CI/CD & Deployment",
+      "coverage": "Build, migrations, deploy, rollback, release approvals"
+    },
+    {
+      "id": "SC-33",
+      "name": "Observability",
+      "coverage": "Logs, metrics, tracing, alerts, health checks"
+    },
+    {
+      "id": "SC-34",
+      "name": "Backup & Disaster Recovery",
+      "coverage": "Backups, restore, RPO, RTO and continuity"
+    },
+    {
+      "id": "SC-35",
+      "name": "Maintenance",
+      "coverage": "Upgrades, vulnerabilities, technical debt, documentation"
+    },
+    {
+      "id": "SC-36",
+      "name": "AI-Specific Risks",
+      "coverage": "Prompt injection, tool abuse, context, model evaluation, costs"
+    },
+    {
+      "id": "SC-37",
+      "name": "Content & Moderation",
+      "coverage": "User-generated content, reporting, sanctions, takedowns"
+    },
+    {
+      "id": "SC-38",
+      "name": "Marketing & Growth",
+      "coverage": "SEO, lead capture, ethical lifecycle email, attribution"
+    },
+    {
+      "id": "SC-39",
+      "name": "Operational Costs",
+      "coverage": "Infrastructure, services, maintenance, margin and budgeting"
+    },
+    {
+      "id": "SC-40",
+      "name": "Product End-of-Life",
+      "coverage": "Shutdown, portability, deletion, communications and migration"
+    }
+  ]
+}

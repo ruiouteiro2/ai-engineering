@@ -1,0 +1,628 @@
+{
+  "nuxt": {
+    "version": "4.6.2",
+    "repository": {
+      "url": "git+https://github.com/nuxt/nuxt.git",
+      "type": "git",
+      "directory": "packages/nuxt"
+    },
+    "dist.integrity": "sha512-KfhAIuHQpxKbTN0ItGpkK0jgzjcOCSOf6FZB3wHk/aZ1OiAMsDvbqua1OGfxuEk3bSlK3X49WyFEL5TwEKm36w==",
+    "scripts": {
+      "build": "tsdown",
+      "test:attw": "node ../../scripts/test-attw.ts"
+    },
+    "license": "MIT",
+    "engines": {
+      "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+    }
+  },
+  "vue": {
+    "version": "3.5.44",
+    "repository": {
+      "url": "git+https://github.com/vuejs/core.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-dvvmaOCG7lAMkJTPqPwWeGMsPS6DIsFsfZDUgBp9V6mHf9b3+/wyVwYR4Es+WV6uJC0FKRxp81Obcq0ZwUcGFQ==",
+    "license": "MIT"
+  },
+  "vue-router": {
+    "version": "5.4.0",
+    "repository": {
+      "url": "git+https://github.com/vuejs/router.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-pFvcYcxinDHjZUlf7AzFBrT8r8Xqvv4uMHoJnjc+EqPawXQvHTkF8S4tfSmQLpriVHUGfkaKlI7Et0KRjTMTdw==",
+    "scripts": {
+      "dev": "vitest --ui",
+      "test": "pnpm run build && pnpm run '/^(test:unit|test:types)$/' && pnpm run test:e2e",
+      "build": "tsdown",
+      "dev:e2e": "vite --config e2e/vite.config.mjs",
+      "test:e2e": "playwright test",
+      "build:e2e": "vue-tsc --noEmit && vite build --config e2e/vite.config.mjs",
+      "build:old": "rimraf dist && rollup -c rollup.config.mjs",
+      "test:unit": "vitest --coverage run",
+      "build:size": "pnpm run build && rollup -c size-checks/rollup.config.mjs",
+      "test:types": "tsgo --build tsconfig.json ./test-dts/tsconfig.experimental.json",
+      "build:playground": "vue-tsc --noEmit && vite build --config playground/vite.config.ts"
+    },
+    "license": "MIT"
+  },
+  "drizzle-orm": {
+    "version": "0.45.4",
+    "repository": {
+      "url": "git+https://github.com/drizzle-team/drizzle-orm.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-NiM1YZpJ2UxyeE67DpDDZ+Tsw4YLX3trSlkNT7Tm9eKoUNb1LvaAaQzXgYQsWs+AQ9TUmmwMmBOCXuqqxUWKKQ==",
+    "scripts": {
+      "b": "pnpm build",
+      "p": "prisma generate --schema src/prisma/schema.prisma",
+      "pack": "(cd dist && npm pack --pack-destination ..) && rm -f package.tgz && mv *.tgz package.tgz",
+      "test": "vitest run",
+      "build": "pnpm p && scripts/build.ts",
+      "publish": "npm publish package.tgz",
+      "test:types": "cd type-tests && tsc"
+    },
+    "license": "Apache-2.0"
+  },
+  "pg": {
+    "version": "8.23.1",
+    "repository": {
+      "url": "git://github.com/brianc/node-postgres.git",
+      "type": "git",
+      "directory": "packages/pg"
+    },
+    "dist.integrity": "sha512-aL96AHANtWjPLDOLqnhx+ngp9+UK7ETEU8VJrDCGvsSSi/mGLcWYsS6Herg7lmaBJe4uwrfqsa7gTEFaSizDoQ==",
+    "scripts": {
+      "test": "make test-all"
+    },
+    "license": "MIT",
+    "engines": {
+      "node": ">= 16.0.0"
+    }
+  },
+  "zod": {
+    "version": "4.6.7",
+    "repository": {
+      "url": "git+https://github.com/colinhacks/zod.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==",
+    "scripts": {
+      "test": "nub exec --node vitest run",
+      "build": "nub exec --node zshy --project tsconfig.build.json",
+      "clean": "git clean -xdf . -e node_modules",
+      "postbuild": "nub ../../scripts/write-stub-package-jsons.ts && nub exec --node biome check --write .",
+      "test:watch": "nub exec --node vitest",
+      "prepublishOnly": "nub ../../scripts/check-versions.ts"
+    },
+    "license": "MIT"
+  },
+  "@aws-sdk/client-s3": {
+    "version": "3.1154.0",
+    "repository": {
+      "url": "git+https://github.com/aws/aws-sdk-js-v3.git",
+      "type": "git",
+      "directory": "clients/client-s3"
+    },
+    "dist.integrity": "sha512-2VRtQFM07lrpjmk6WNRghU7rKg4EX93kuvl4RHDp2NJEDxee57HRQRo72gM83Jr46OFUcqQf0KWTMataX2Q66Q==",
+    "scripts": {
+      "test": "yarn g:vitest run --passWithNoTests",
+      "build": "concurrently 'yarn:build:types' 'yarn:build:es' && yarn build:cjs",
+      "clean": "premove dist-cjs dist-es dist-types",
+      "build:es": "premove dist-es && tsc -p tsconfig.es.json",
+      "test:e2e": "yarn g:vitest run -c vitest.config.e2e.mts",
+      "build:cjs": "node ../../scripts/compilation/inline",
+      "test:index": "tsc -p tsconfig.test.json && node ./test/index-objects.spec.mjs",
+      "test:watch": "yarn g:vitest watch --passWithNoTests",
+      "build:types": "premove dist-types && tsc -p tsconfig.types.json",
+      "extract:docs": "api-extractor run --local",
+      "test:browser": "yarn g:vitest run -c vitest.config.browser.mts",
+      "test:e2e:watch": "yarn g:vitest watch -c vitest.config.e2e.mts",
+      "generate:client": "node ../../scripts/generate-clients/single-service",
+      "test:integration": "yarn g:vitest run --passWithNoTests -c vitest.config.integ.mts",
+      "build:include:deps": "yarn g:turbo run build -F=\"$npm_package_name\"",
+      "test:browser:watch": "yarn g:vitest watch -c vitest.config.browser.mts",
+      "build:types:downlevel": "downlevel-dts dist-types dist-types/ts3.4",
+      "test:integration:watch": "yarn g:vitest watch --passWithNoTests -c vitest.config.integ.mts"
+    },
+    "license": "Apache-2.0",
+    "engines": {
+      "node": ">=20.0.0"
+    }
+  },
+  "@aws-sdk/s3-request-presigner": {
+    "version": "3.1154.0",
+    "repository": {
+      "url": "git+https://github.com/aws/aws-sdk-js-v3.git",
+      "type": "git",
+      "directory": "packages/s3-request-presigner"
+    },
+    "dist.integrity": "sha512-TR4tYLTDhGaGV+JNouo0JATMpVkoMYvbl4g0zPhJxT8lEM3tBT+OOHRwWLCIM40DM8ILWiscCLvIat4vGpe9Gw==",
+    "scripts": {
+      "test": "yarn g:vitest run",
+      "build": "concurrently 'yarn:build:types' 'yarn:build:es' && yarn build:cjs",
+      "clean": "premove dist-cjs dist-es dist-types",
+      "build:es": "premove dist-es && tsc -p tsconfig.es.json",
+      "build:cjs": "node ../../scripts/compilation/inline",
+      "test:watch": "yarn g:vitest watch",
+      "build:types": "premove dist-types && tsc -p tsconfig.types.json",
+      "extract:docs": "api-extractor run --local",
+      "build:include:deps": "yarn g:turbo run build -F=\"$npm_package_name\"",
+      "build:types:downlevel": "downlevel-dts dist-types dist-types/ts3.4"
+    },
+    "license": "Apache-2.0",
+    "engines": {
+      "node": ">=20.0.0"
+    }
+  },
+  "nodemailer": {
+    "version": "10.1.7",
+    "repository": {
+      "url": "git+https://github.com/nodemailer/nodemailer.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-OQa6FDln5fLttmqSbjDiRYvFDOFNrBqfiOwHPlEbURil3b+vPB1v8xpi+Sp46drzNDlsTnNsS502vthmz56r4w==",
+    "scripts": {
+      "lint": "eslint . && npm run typecheck",
+      "test": "node --import tsx --test --test-concurrency=1 $(find test \\( -name '*-test.ts' -o -name '*.test.ts' \\))",
+      "build": "node scripts/build.js",
+      "format": "prettier --write \"**/*.{js,cjs,ts,json,md}\"",
+      "update": "rm -rf node_modules/ package-lock.json && ncu -u && npm install",
+      "prepare": "npm run build",
+      "pretest": "npm run build",
+      "lint:fix": "eslint . --fix",
+      "test:bun": "bun test --timeout 60000 $(find ./test \\( -name '*-test.ts' -o -name '*.test.ts' \\))",
+      "typecheck": "node scripts/build.js --generate-only && tsc -p tsconfig.json",
+      "pretest:bun": "npm run build",
+      "format:check": "prettier --check \"**/*.{js,cjs,ts,json,md}\"",
+      "test:coverage": "c8 node --import tsx --test --test-concurrency=1 $(find test \\( -name '*-test.ts' -o -name '*.test.ts' \\))",
+      "pretest:coverage": "npm run build"
+    },
+    "license": "MIT-0",
+    "engines": {
+      "node": ">=20.0.0"
+    }
+  },
+  "@tailwindcss/vite": {
+    "version": "4.3.3",
+    "repository": {
+      "url": "https://github.com/tailwindlabs/tailwindcss.git",
+      "type": "git",
+      "directory": "packages/@tailwindcss-vite"
+    },
+    "dist.integrity": "sha512-yYU8cogLeSh/ms2jh8Fj7jaba/EWa7Ja6GoUqYZaraEuCI5YS6ms6ObZgjjedm+jm6XZjdNRWBpPP6Z86oOxcw==",
+    "scripts": {
+      "dev": "pnpm run build -- --watch",
+      "build": "tsup-node"
+    },
+    "license": "MIT"
+  },
+  "tailwindcss": {
+    "version": "4.3.3",
+    "repository": {
+      "url": "https://github.com/tailwindlabs/tailwindcss.git",
+      "type": "git",
+      "directory": "packages/tailwindcss"
+    },
+    "dist.integrity": "sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==",
+    "scripts": {
+      "dev": "tsup-node --env.NODE_ENV development --watch",
+      "lint": "tsc --noEmit",
+      "build": "tsup-node --env.NODE_ENV production",
+      "test:ui": "playwright test"
+    },
+    "license": "MIT"
+  },
+  "typescript": {
+    "version": "7.0.2",
+    "repository": {
+      "url": "git+https://github.com/microsoft/TypeScript.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==",
+    "license": "Apache-2.0",
+    "engines": {
+      "node": ">=16.20.0"
+    }
+  },
+  "vue-tsc": {
+    "version": "3.3.13",
+    "repository": {
+      "url": "git+https://github.com/vuejs/language-tools.git",
+      "type": "git",
+      "directory": "packages/tsc"
+    },
+    "dist.integrity": "sha512-jE4/bXdOMSHVxEGgQCqNllJy+9N3Gx6tfSAsg0yhFK/MAN6eXqISihupnDEKSCt12VVnjN2gI3AqLYcqoh5x/A==",
+    "license": "MIT"
+  },
+  "vitest": {
+    "version": "5.0.5",
+    "repository": {
+      "url": "git+https://github.com/vitest-dev/vitest.git",
+      "type": "git",
+      "directory": "packages/vitest"
+    },
+    "dist.integrity": "sha512-cPODOMF8YnkiiYtDdHo6n4wWmBrOBBbOIYH2d33M4l3CdNn72h+qMmO6uXffUN6A5AZFXNND/d+krS9mgkXRfg==",
+    "scripts": {
+      "dev": "NODE_OPTIONS=\"--max-old-space-size=8192\" rollup -c --watch -m inline",
+      "build": "premove dist && rollup -c"
+    },
+    "license": "MIT",
+    "engines": {
+      "node": "^22.12.0 || ^24.0.0 || >=26.0.0"
+    }
+  },
+  "@playwright/test": {
+    "version": "1.64.1",
+    "repository": {
+      "url": "git+https://github.com/microsoft/playwright.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-IaYGml/nSOiZWROfPtuIL7neuu9qDOZ3TNvNljUIrhDMxiGTgPjzj/g9p9RxpS2tSepPDRY+UwAaEeiKtUvIAg==",
+    "scripts": {},
+    "license": "Apache-2.0",
+    "engines": {
+      "node": ">=20"
+    }
+  },
+  "@axe-core/playwright": {
+    "version": "4.14.0",
+    "repository": {
+      "url": "git+https://github.com/dequelabs/axe-core-npm.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-SGUhG5PIHd2eMdpgBF2PyQLOhX+qyDR2PT4cmoS4Qk2ak+jX/rrSvst9l0PGv5WTHolKpUMvVmoHpr4cZgf1RQ==",
+    "scripts": {
+      "test": "mocha --timeout 60000 -r ts-node/register 'test/**.spec.ts'",
+      "build": "tsup src/index.ts --dts --format esm,cjs",
+      "prepare": "pnpm exec playwright install && pnpm run build",
+      "test:ts": "tsc --ignoreConfig test/tsTest.ts --noEmit --skipLibCheck --esModuleInterop",
+      "coverage": "nyc pnpm run test",
+      "prebuild": "rimraf dist",
+      "test:esm": "node test/esmTest.mjs",
+      "pack:lint": "pnpm pack --config.ignore-scripts=true --out ../../node_modules/.cache/package-lint/playwright.tgz",
+      "lint:types": "pnpm run pack:lint && attw ../../node_modules/.cache/package-lint/playwright.tgz",
+      "test:export": "pnpm run test:esm && pnpm run test:commonjs && pnpm run test:ts",
+      "lint:package": "pnpm run pack:lint && publint --strict ../../node_modules/.cache/package-lint/playwright.tgz",
+      "test:commonjs": "node test/commonjsTest.js"
+    },
+    "license": "MPL-2.0",
+    "engines": {
+      "node": ">=22.12.0"
+    }
+  },
+  "tsx": {
+    "version": "4.23.15",
+    "repository": {
+      "url": "git+https://github.com/privatenumber/tsx.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-Yiex1Ovn8z2xPpOWckIiysV1SSyRMY9BkLF++q0yKiDxCqRhosKfMg3janKkiLBwZ5c/YryloKwGZcrEmtwxKw==",
+    "license": "MIT",
+    "engines": {
+      "node": ">=18.0.0"
+    }
+  },
+  "@types/pg": {
+    "version": "8.23.1",
+    "repository": {
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "type": "git",
+      "directory": "types/pg"
+    },
+    "dist.integrity": "sha512-fKVHpikPdg4GKks3JuLEhvwSyvwzF23hnabPy6DD8ljVbC7+6J5dQzdv4arV6jqq57djnMgs1HKBxX4P8aBI3A==",
+    "scripts": {},
+    "license": "MIT"
+  },
+  "@types/node": {
+    "version": "26.6.5",
+    "repository": {
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "type": "git",
+      "directory": "types/node"
+    },
+    "dist.integrity": "sha512-uMzsv9stDdofIZBx4UGh4Z9ZgXnGC9seRDscilBcTHAeOFk67MZg/k9bWVfO+bk4qZmG+l52hRnLwUiH2LnJTg==",
+    "scripts": {},
+    "license": "MIT"
+  },
+  "@types/nodemailer": {
+    "version": "8.0.2",
+    "repository": {
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+      "type": "git",
+      "directory": "types/nodemailer"
+    },
+    "dist.integrity": "sha512-c7M5ox8p0nEOfbJ2E9Qcmt8/QCu/VzsiAhzBiZbvky2PhKZDHpKB3sQHBM5MEZNkCfBOaS6S9//AGPRTNB7IaA==",
+    "scripts": {},
+    "license": "MIT"
+  },
+  "drizzle-kit": {
+    "version": "0.31.11",
+    "repository": {
+      "url": "git+https://github.com/drizzle-team/drizzle-orm.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-YCYqxTLIB2OCqf6w9/Vef13baBVbwQIPcbT4Y56AfO6B9ajZhDhD8Jkveg/hJvT/iuMloKD/IYYkyMMNhr7Kqg==",
+    "scripts": {
+      "api": "tsx ./dev/api.ts",
+      "cli": "tsx ./src/cli/index.ts",
+      "tsc": "tsc -p tsconfig.build.json --noEmit",
+      "pack": "cp package.json README.md dist/ && (cd dist && npm pack --pack-destination ..) && rm -f package.tgz && mv *.tgz package.tgz",
+      "test": "pnpm tsc && TEST_CONFIG_PATH_PREFIX=./tests/cli/ vitest",
+      "build": "rm -rf ./dist && tsx build.ts && cp package.json dist/ && attw --pack dist",
+      "publish": "npm publish package.tgz",
+      "build:dev": "rm -rf ./dist && tsx build.dev.ts && tsc -p tsconfig.cli-types.json && chmod +x ./dist/index.cjs",
+      "migrate:old": "drizzle-kit generate:mysql"
+    },
+    "license": "MIT"
+  },
+  "eslint": {
+    "version": "10.13.0",
+    "repository": {
+      "url": "git+https://github.com/eslint/eslint.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-UohDjD4zSzEwhf58M3O7vc/ycc8O1I7dNlhtD0WxE8Px8EHNJKtUwzBqrzeGhisRuv2ag4sAYswszCJRgKXYUg==",
+    "scripts": {
+      "fmt": "prettier --write .",
+      "lint": "node Makefile.js lint",
+      "test": "node Makefile.js test",
+      "lint:fix": "node Makefile.js lint -- fix",
+      "test:cli": "mocha",
+      "fmt:check": "prettier --check .",
+      "test:fuzz": "node Makefile.js fuzz",
+      "test:pnpm": "cd tests/pnpm && node check.js && pnpm install && pnpm exec tsc",
+      "build:site": "node Makefile.js gensite",
+      "lint:types": "attw --pack",
+      "test:types": "tsc -p tests/lib/types/tsconfig.json && npm run test:types --workspaces --if-present",
+      "lint:unused": "knip",
+      "test:emfile": "node tools/check-emfile-handling.js",
+      "build:readme": "node tools/update-readme.js",
+      "lint:docs:js": "node Makefile.js lintDocsJS",
+      "test:browser": "node Makefile.js cypress",
+      "build:webpack": "node Makefile.js webpack",
+      "test:ecosystem": "node tools/test-ecosystem/index.mjs",
+      "test:types:5.3": "npx -p typescript@5.3 -y -- tsc -p tsconfig.types-legacy.json",
+      "test:types:5.x": "npx -p typescript@5.x -y -- tsc -p tsconfig.types.json",
+      "test:types:7.x": "npx -p @typescript/native-preview@latest -y -- tsgo -p tsconfig.types.json",
+      "test:types:all": "npm run test:types && npm run test:types:5.3 && npm run test:types:5.x && npm run test:types:7.x",
+      "lint:rule-types": "node tools/update-rule-type-headers.js --check",
+      "release:publish": "node Makefile.js publishRelease",
+      "lint:fix:docs:js": "node Makefile.js lintDocsJS -- fix",
+      "test:performance": "node Makefile.js perf",
+      "build:rules-index": "node Makefile.js generateRuleIndexPage",
+      "release:generate:rc": "node Makefile.js generatePrerelease -- rc",
+      "release:generate:beta": "node Makefile.js generatePrerelease -- beta",
+      "test:ecosystem:update": "node tools/test-ecosystem/update.mjs",
+      "release:generate:alpha": "node Makefile.js generatePrerelease -- alpha",
+      "build:docs:update-links": "node tools/fetch-docs-links.js",
+      "lint:docs:rule-examples": "node Makefile.js checkRuleExamples",
+      "release:generate:latest": "node Makefile.js generateRelease -- latest",
+      "release:generate:maintenance": "node Makefile.js generateRelease -- maintenance"
+    },
+    "license": "MIT",
+    "engines": {
+      "node": "^20.19.0 || ^22.13.0 || >=24"
+    }
+  },
+  "@eslint/js": {
+    "version": "10.0.1",
+    "repository": {
+      "url": "git+https://github.com/eslint/eslint.git",
+      "type": "git",
+      "directory": "packages/js"
+    },
+    "dist.integrity": "sha512-zeR9k5pd4gxjZ0abRoIaxdc7I3nDktoXZk2qOv9gCNWx3mVwEn32VRhyLaRsDiJjTs0xq/T8mfPtyuXu7GWBcA==",
+    "scripts": {
+      "test:types": "tsc -p tests/types/tsconfig.json"
+    },
+    "license": "MIT",
+    "engines": {
+      "node": "^20.19.0 || ^22.13.0 || >=24"
+    }
+  },
+  "typescript-eslint": {
+    "version": "8.72.0",
+    "repository": {
+      "url": "https://github.com/typescript-eslint/typescript-eslint.git",
+      "type": "git",
+      "directory": "packages/typescript-eslint"
+    },
+    "dist.integrity": "sha512-r26Fkc8As+mZvqp7SLsMmNFyYUup/6CjK7/eHBHmhOw6GH6n6YFxHVFrG0jN1c5CMpDzelLPxvgeCOzx7BjN+A==",
+    "scripts": {
+      "lint": "pnpm -w exec nx lint",
+      "test": "pnpm -w exec nx test",
+      "build": "pnpm exec nx build",
+      "clean": "rimraf dist/ coverage/",
+      "format": "pnpm -w run format",
+      "typecheck": "pnpm -w exec nx typecheck",
+      "attw-check": "pnpm -w exec nx attw-check",
+      "typecheck:tsgo": "pnpm -w exec nx typecheck:tsgo"
+    },
+    "license": "MIT",
+    "engines": {
+      "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+    }
+  },
+  "eslint-plugin-vue": {
+    "version": "10.11.1",
+    "repository": {
+      "url": "git+https://github.com/vuejs/eslint-plugin-vue.git",
+      "type": "git"
+    },
+    "dist.integrity": "sha512-pasVXhl7wUmIvhujoqs/m0mJ9r59QW1IR9XXYKGR0FETzSM+Hhlf4qKIYgWiDDP+9YKv4YfbwskD7LqIdVcgQw==",
+    "scripts": {
+      "new": "node tools/new-rule.js",
+      "tsc": "tsc",
+      "lint": "eslint . && markdownlint \"**/*.md\"",
+      "test": "vitest run",
+      "build": "npm run typegen && tsdown",
+      "cover": "npm run cover:test && npm run cover:report",
+      "debug": "vitest run --inspect --no-file-parallelism --reporter=dot tests/lib",
+      "start": "npm run test:base -- --watch",
+      "update": "node ./tools/update.js",
+      "typegen": "node ./tools/generate-typegen.mjs",
+      "version": "npm run generate:version && git add .",
+      "lint:fix": "eslint . --fix && markdownlint \"**/*.md\" --fix",
+      "test:base": "vitest run --reporter=dot tests/lib",
+      "cover:test": "vitest run --coverage --reporter=dot tests/lib",
+      "docs:build": "vitepress build docs",
+      "docs:watch": "vitepress dev docs",
+      "preversion": "npm test && git add .",
+      "cover:report": "echo 'HTML coverage report available at ./coverage/index.html'",
+      "predocs:build": "npm run update",
+      "generate:version": "env-cmd --environments version -- npm run update && npm run lint:fix",
+      "update-resources": "node ./tools/update-resources.js",
+      "changeset:publish": "npm run build && changeset publish",
+      "changeset:version": "changeset version && npm run generate:version && git add --all",
+      "test:integrations": "vitest run tests/integrations"
+    },
+    "license": "MIT",
+    "engines": {
+      "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+    }
+  },
+  "@electric-sql/pglite": {
+    "version": "0.5.11",
+    "repository": {
+      "url": "git+https://github.com/electric-sql/pglite.git",
+      "type": "git",
+      "directory": "packages/pglite"
+    },
+    "dist.integrity": "sha512-SWuqsTjA4DDWqgZ05PC1RJaq8e00p5KACxbqaikDFQ8dIGA0SLRzuPniky7IW+q/c5RDNMdEXwv7mFBWIx9Hxw==",
+    "scripts": {
+      "dev": "concurrently \"tsup --watch\" \"sleep 1 && tsx scripts/bundle-wasm.ts\" \"pnpm dev-server\"",
+      "lint": "eslint ./src ./tests --report-unused-disable-directives --max-warnings 0",
+      "test": "pnpm test:basic && pnpm test:node",
+      "build": "pnpm build:js",
+      "format": "prettier --write ./src ./tests",
+      "version": "echo $npm_package_version",
+      "build:js": "tsup && tsx scripts/bundle-wasm.ts",
+      "test:bun": "pnpm test:clean && bun test --timeout 15000 tests/basic.test.ts tests/live.test.ts tests/targets/runtimes/node-fs.test.js",
+      "test:web": "pnpm test:clean && concurrently -s first --hide 1 --prefix none -k \"sleep 2 && vitest --fileParallelism false tests/targets/web/*.test.web.*\" \"npx http-server --port 3334 ./\"",
+      "test:deno": "cd tests/targets/deno && deno task test",
+      "test:node": "pnpm test:clean && pnpm vitest tests/targets/runtimes/node-*.test.js",
+      "typecheck": "tsc --noEmit",
+      "dev-server": "pnpm http-server ../",
+      "stylecheck": "pnpm lint && prettier --check ./src ./tests",
+      "test:basic": "pnpm test:clean && vitest tests/*.test.js tests/*.test.ts tests/**/*.test.js tests/**/*.test.ts",
+      "test:clean": "rm -rf ./pgdata-test",
+      "check:exports": "attw . --pack --profile node16",
+      "test:runtimes": "pnpm test:bun && pnpm test:node",
+      "test:integration": "pnpm test:runtimes && pnpm test:web"
+    },
+    "license": "Apache-2.0"
+  },
+  "_installedSelections": {
+    "@aws-sdk/client-s3": {
+      "version": "3.1154.0",
+      "integrity": "sha512-2VRtQFM07lrpjmk6WNRghU7rKg4EX93kuvl4RHDp2NJEDxee57HRQRo72gM83Jr46OFUcqQf0KWTMataX2Q66Q=="
+    },
+    "@aws-sdk/s3-request-presigner": {
+      "version": "3.1154.0",
+      "integrity": "sha512-TR4tYLTDhGaGV+JNouo0JATMpVkoMYvbl4g0zPhJxT8lEM3tBT+OOHRwWLCIM40DM8ILWiscCLvIat4vGpe9Gw=="
+    },
+    "@tailwindcss/vite": {
+      "version": "4.3.3",
+      "integrity": "sha512-yYU8cogLeSh/ms2jh8Fj7jaba/EWa7Ja6GoUqYZaraEuCI5YS6ms6ObZgjjedm+jm6XZjdNRWBpPP6Z86oOxcw=="
+    },
+    "drizzle-orm": {
+      "version": "0.45.4",
+      "integrity": "sha512-NiM1YZpJ2UxyeE67DpDDZ+Tsw4YLX3trSlkNT7Tm9eKoUNb1LvaAaQzXgYQsWs+AQ9TUmmwMmBOCXuqqxUWKKQ=="
+    },
+    "nodemailer": {
+      "version": "10.1.7",
+      "integrity": "sha512-OQa6FDln5fLttmqSbjDiRYvFDOFNrBqfiOwHPlEbURil3b+vPB1v8xpi+Sp46drzNDlsTnNsS502vthmz56r4w=="
+    },
+    "nuxt": {
+      "version": "4.6.2",
+      "integrity": "sha512-KfhAIuHQpxKbTN0ItGpkK0jgzjcOCSOf6FZB3wHk/aZ1OiAMsDvbqua1OGfxuEk3bSlK3X49WyFEL5TwEKm36w=="
+    },
+    "pg": {
+      "version": "8.23.1",
+      "integrity": "sha512-aL96AHANtWjPLDOLqnhx+ngp9+UK7ETEU8VJrDCGvsSSi/mGLcWYsS6Herg7lmaBJe4uwrfqsa7gTEFaSizDoQ=="
+    },
+    "tailwindcss": {
+      "version": "4.3.3",
+      "integrity": "sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ=="
+    },
+    "vue": {
+      "version": "3.5.44",
+      "integrity": "sha512-dvvmaOCG7lAMkJTPqPwWeGMsPS6DIsFsfZDUgBp9V6mHf9b3+/wyVwYR4Es+WV6uJC0FKRxp81Obcq0ZwUcGFQ=="
+    },
+    "zod": {
+      "version": "4.6.7",
+      "integrity": "sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg=="
+    },
+    "@axe-core/playwright": {
+      "version": "4.14.0",
+      "integrity": "sha512-SGUhG5PIHd2eMdpgBF2PyQLOhX+qyDR2PT4cmoS4Qk2ak+jX/rrSvst9l0PGv5WTHolKpUMvVmoHpr4cZgf1RQ=="
+    },
+    "@eslint/js": {
+      "version": "10.0.1",
+      "integrity": "sha512-zeR9k5pd4gxjZ0abRoIaxdc7I3nDktoXZk2qOv9gCNWx3mVwEn32VRhyLaRsDiJjTs0xq/T8mfPtyuXu7GWBcA=="
+    },
+    "@playwright/test": {
+      "version": "1.64.1",
+      "integrity": "sha512-IaYGml/nSOiZWROfPtuIL7neuu9qDOZ3TNvNljUIrhDMxiGTgPjzj/g9p9RxpS2tSepPDRY+UwAaEeiKtUvIAg=="
+    },
+    "@types/node": {
+      "version": "26.6.5",
+      "integrity": "sha512-uMzsv9stDdofIZBx4UGh4Z9ZgXnGC9seRDscilBcTHAeOFk67MZg/k9bWVfO+bk4qZmG+l52hRnLwUiH2LnJTg=="
+    },
+    "@types/nodemailer": {
+      "version": "8.0.2",
+      "integrity": "sha512-c7M5ox8p0nEOfbJ2E9Qcmt8/QCu/VzsiAhzBiZbvky2PhKZDHpKB3sQHBM5MEZNkCfBOaS6S9//AGPRTNB7IaA=="
+    },
+    "@types/pg": {
+      "version": "8.23.1",
+      "integrity": "sha512-fKVHpikPdg4GKks3JuLEhvwSyvwzF23hnabPy6DD8ljVbC7+6J5dQzdv4arV6jqq57djnMgs1HKBxX4P8aBI3A=="
+    },
+    "drizzle-kit": {
+      "version": "0.31.11",
+      "integrity": "sha512-YCYqxTLIB2OCqf6w9/Vef13baBVbwQIPcbT4Y56AfO6B9ajZhDhD8Jkveg/hJvT/iuMloKD/IYYkyMMNhr7Kqg=="
+    },
+    "esbuild": {
+      "version": "0.28.2",
+      "integrity": "sha512-HKVLS8dvII+xoKW9kmqxbRKrnWEXfJJr/FZhhJmiqIB0e053QNYFqOBouTMO/k5sID4MvCiUCvv8b9M4h32wIA=="
+    },
+    "eslint": {
+      "version": "10.13.0",
+      "integrity": "sha512-UohDjD4zSzEwhf58M3O7vc/ycc8O1I7dNlhtD0WxE8Px8EHNJKtUwzBqrzeGhisRuv2ag4sAYswszCJRgKXYUg=="
+    },
+    "eslint-config-prettier": {
+      "version": "10.1.8",
+      "integrity": "sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w=="
+    },
+    "eslint-plugin-vue": {
+      "version": "10.11.1",
+      "integrity": "sha512-pasVXhl7wUmIvhujoqs/m0mJ9r59QW1IR9XXYKGR0FETzSM+Hhlf4qKIYgWiDDP+9YKv4YfbwskD7LqIdVcgQw=="
+    },
+    "prettier": {
+      "version": "3.9.10",
+      "integrity": "sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA=="
+    },
+    "tsx": {
+      "version": "4.23.15",
+      "integrity": "sha512-Yiex1Ovn8z2xPpOWckIiysV1SSyRMY9BkLF++q0yKiDxCqRhosKfMg3janKkiLBwZ5c/YryloKwGZcrEmtwxKw=="
+    },
+    "typescript": {
+      "version": "5.9.3",
+      "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw=="
+    },
+    "typescript-eslint": {
+      "version": "8.72.0",
+      "integrity": "sha512-r26Fkc8As+mZvqp7SLsMmNFyYUup/6CjK7/eHBHmhOw6GH6n6YFxHVFrG0jN1c5CMpDzelLPxvgeCOzx7BjN+A=="
+    },
+    "vitest": {
+      "version": "5.0.5",
+      "integrity": "sha512-cPODOMF8YnkiiYtDdHo6n4wWmBrOBBbOIYH2d33M4l3CdNn72h+qMmO6uXffUN6A5AZFXNND/d+krS9mgkXRfg=="
+    },
+    "vue-tsc": {
+      "version": "3.3.13",
+      "integrity": "sha512-jE4/bXdOMSHVxEGgQCqNllJy+9N3Gx6tfSAsg0yhFK/MAN6eXqISihupnDEKSCt12VVnjN2gI3AqLYcqoh5x/A=="
+    }
+  },
+  "_note": "Registry snapshots above informed selection. _installedSelections and package-lock.json identify the delivered versions; lifecycle scripts were disabled. TypeScript 5.9.3 was selected for lint toolchain compatibility."
+}

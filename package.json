@@ -1,0 +1,61 @@
+{
+  "name": "ai-engineering",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "scripts": {
+    "dev": "nuxt dev --host 127.0.0.1",
+    "build": "nuxt build && node scripts/build-worker.mjs",
+    "start": "node .output/server/index.mjs",
+    "prepare": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "node --env-file-if-exists=.env node_modules/vitest/vitest.mjs run tests/integration",
+    "test:e2e": "node --env-file-if-exists=.env node_modules/playwright/cli.js test",
+    "lint": "eslint .",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node --env-file=.env --import tsx scripts/migrate.ts",
+    "db:seed": "node --env-file=.env --import tsx scripts/seed.ts",
+    "admin:create": "node --env-file=.env --import tsx scripts/admin.ts",
+    "mail:work": "node --env-file=.env --import tsx scripts/mail-worker.ts",
+    "format": "prettier --write app server shared db scripts tests content *.ts *.json",
+    "format:check": "prettier --check app server shared db scripts tests content *.ts *.json",
+    "setup": "node scripts/setup.mjs",
+    "audit:dependencies": "node scripts/audit-dependencies.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.1154.0",
+    "@aws-sdk/s3-request-presigner": "3.1154.0",
+    "@tailwindcss/vite": "4.3.3",
+    "drizzle-orm": "0.45.4",
+    "nodemailer": "10.1.7",
+    "nuxt": "4.6.2",
+    "pg": "8.23.1",
+    "tailwindcss": "4.3.3",
+    "vue": "3.5.44",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.5",
+    "@types/nodemailer": "8.0.2",
+    "@types/pg": "8.23.1",
+    "drizzle-kit": "0.31.11",
+    "esbuild": "0.28.2",
+    "eslint": "10.13.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-vue": "10.11.1",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.0",
+    "vitest": "5.0.5",
+    "vue-tsc": "3.3.13"
+  }
+}

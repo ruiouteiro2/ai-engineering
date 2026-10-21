@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+# Two trailing spaces are intentional Markdown hard line breaks in the supplied brief.
+*.md whitespace=-blank-at-eol
